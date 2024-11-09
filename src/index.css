@@ -316,6 +316,7 @@ hr{
   display: flex;
   justify-content: end;
   align-items: center;
+  margin-bottom: 20px;
 }
 .footer-bottom{
   text-align: center;
@@ -355,6 +356,6 @@ hr{
 .map-styles{
   width: 100%;
   min-height: 150px;
-  border-radius: 4px;
+  border-radius: 6px;
   border: 2px solid rgb(255, 254, 254);
 }
