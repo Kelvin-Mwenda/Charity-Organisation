@@ -30,21 +30,21 @@ export default function FooterLayout (){
 
                     {/* Social Media Icons */}
                     <div className="social-media-styles">
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faInstagram} size="2x" className="icon-style" />
-                    </a>
-                    <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faTiktok} size="2x" className="icon-style" />
-                    </a>
-                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faLinkedin} size="2x" className="icon-style" />
-                    </a>
-                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faTwitter} size="2x" className="icon-style" />
-                    </a>
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faFacebook} size="2x" className="icon-style" />
-                    </a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faInstagram} size="2x" className="icon-style" />
+                        </a>
+                        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faTiktok} size="2x" className="icon-style" />
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faLinkedin} size="2x" className="icon-style" />
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faTwitter} size="2x" className="icon-style" />
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faFacebook} size="2x" className="icon-style" />
+                        </a>
                     </div>
                 </div>
 

@@ -8,7 +8,7 @@ export default function ProjectsError() {
         <div>
             <h1>Fetching Data Error</h1>
             <p>{error.message}</p>
-            <p>Go to the <Link to="/actions/projects">Projects</Link>.</p>
+            <p>Go to the <Link to="/">Home Page</Link>.</p>
         </div>
     )
 }

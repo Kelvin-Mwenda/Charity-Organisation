@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 :root {
-  --primary: #02be4d;
+  --primary: rgb(5, 125, 85);
   --secondary: #ffffff;
 }
 body {
   margin: 0;
-  font-family: "Poppins";
+  font-family: 'Times New Roman', Times, serif;
   background: var(--secondary);
 }
 * {
@@ -14,6 +14,7 @@ body {
 }
 p {
   margin: 10px 0;
+  font-size: 20px;
 }
 button {
   border: 0;
@@ -23,42 +24,130 @@ button {
   background: var(--primary);
   cursor: pointer;
 }
+.root-layout{
+  margin: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+}
 
 /* header */
+.title{
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  color: black;
+  background: hsla(160, 92%, 25%, 0.893);
+  text-align: center;
+  margin: 0;
+}
+.title .logo{
+  max-height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
 header nav{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 10px;
   gap: 16px;
   max-width: 1200px;
   margin: 0 auto;
+  background: #ffffff;
 }
 
 header nav h1{ 
   flex: 1;
   margin-right: auto;
-  /* border-bottom: 3px solid var(--primary); */
 }
 
 header nav a{
   text-decoration: none;
   padding: 6px;
   border-radius: 4px;
+  color: rgb(5, 125, 85);
+  transition: all 0.3s ease-in-out;
 }
 
 header nav a:hover{
-  background: rgb(248, 244, 244);
+  background: rgb(5, 125, 85);
+  color: #ffffff;
 }
 
 header nav a.active{
-  background: var(--primary);
+  color: rgb(5, 125, 85);
+  background: white;
+  border: 1px solid rgb(5, 125, 85);
+  border-radius: 4px;
 }
 
 /* page content */
-main{
+.hero-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 20px;
+  height: 400px;
+  padding: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+}
+.home-verse1{
+  text-align: center;
+  width: 50%;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .home-verse p{
+    content: "";
+    display: none;
+    margin: auto 20px;
+  }
+  .title Image{
+    display: none;
+  }
+}
+.home-verse{
+  text-align: center;
+  max-width: 1000px;
+}
+.home-verse h1{
+  
+}
+.about-us{
+  /* display: flex;
+  flex-direction: row;
+  gap: 30px; 
+  justify-content: end; */
+}
+/* .about-us .about-text{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-right: auto;
+}
+.about-us .about-image{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+} */
+.home-content{
   max-width: 1200px;
   margin: 20px 100px;
+}
+main{
+  
   align-items: center;
   color: #030303;
 }
@@ -69,7 +158,15 @@ main{
 .home-intro .home-verse{
   text-align: center;
 }
-
+.objectives, .current-situation{
+  background: rgb(5, 125, 85);
+  padding: 20px;
+  align-items: center;
+}
+.objectives-section, .strategy, .sponsors, .current-situation-details, .testimonials{
+  max-width: 1200px;
+  margin: 20px 100px;
+}
 /* about us */
 .about-us h1{
   text-align: center;
@@ -77,9 +174,7 @@ main{
 
 /* contact us */
 .contact-us{
-  border-radius: 4px;
-  border: 1px solid black;
-  box-shadow: 6px 8px 4px hsl(0, 0%, 0%,0.7);
+  border: none;
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -99,7 +194,6 @@ main{
   flex: 1;
   align-items: center;
   text-align: center;
-  color: #ffffff;
   font-size: 1.2rem;
   background-position: center;
   background-size: cover;
@@ -112,27 +206,42 @@ main{
 .actions h1{
   text-align: center;
 }
-/* header */
+
 .actions nav{
   display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 30px;
   margin: 30px 0;
 }
 
+.actions nav a{
+  text-decoration: none;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: rgb(5, 125, 85);
+  transition: all 0.4s ease-in-out;
+}
+
+.actions nav a:hover{
+  background-color: rgb(5, 125, 85);
+  color: #ffffff;
+}
+
+.actions nav a.active{
+  color: rgb(5, 125, 85);
+  background-color: white;
+  border: 1px solid rgb(5, 125, 85);
+  border-radius: 4px;
+}
+
 .actions nav h1{ 
   flex: 1;
   margin-right: auto;
-  /* border-bottom: 3px solid var(--primary); */
 }
 
-.actions nav a{
-  padding: 10px;
-  border: 2px solid rgb(8, 8, 8);
-  border-radius: 4px;
-  text-decoration: none;
-}
-
+/* projects list */
 .projects nav a{
   padding: 10px;
   border: 2px solid rgb(8, 8, 8);
@@ -140,17 +249,6 @@ main{
   text-decoration: none;
 }
 
-.actions nav a:hover{
-  background: rgb(248, 244, 244);
-}
-
-
-.actions nav a.active{
-  background: var(--primary);
-  border: none;
-}
-
-/* projects list */
 .projects h1 {
   text-align: center;
 }
@@ -181,7 +279,7 @@ main{
   text-decoration: none;
 }
 .projects h2{
-  color: var(--primary);
+  color: rgb(106, 230, 106);
 }
 .projects p {
   color: rgb(255, 255, 255);
@@ -219,14 +317,15 @@ main{
 }
 
 /* news list */
-.news h1 {
+.news h4 {
   text-align: center;
 }
 .news {
   display: grid;
+  color: rgb(106, 230, 106);
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  padding: auto;
+  padding: 4px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -241,14 +340,8 @@ main{
   text-decoration: none;
   box-shadow: 4px 3px 3px hsl(0, 0%, 0%, 0.3);
 }
-.news h2{
-  color: var(--primary);
-  margin: auto;
-}
 .news p {
   color: rgb(255, 255, 255);
-}
-.news p {
   margin: 0;
   transition: all ease-in-out 0.2s;
 }
@@ -260,7 +353,7 @@ main{
 /* breadcrumbs */
 .breadcrumbs {
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 5px auto;
 }
 .breadcrumbs > *{
   display: inline-block;
@@ -318,7 +411,7 @@ hr{
   align-items: center;
   margin-bottom: 20px;
 }
-.footer-bottom{
+.footer-bottom p{
   text-align: center;
   margin: 0;
   font-size: 0.8rem;
