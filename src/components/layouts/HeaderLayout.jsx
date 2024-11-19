@@ -21,16 +21,19 @@ export default function Header(){
             </div>
             <header className="shadow-lg justify-content-center sticky-top ms-0" style={{margin: "0 -20px 0 -20px"}}>
                     <nav>
-                        <NavLink to="home">Home</NavLink>
+                        <NavLink to="/home">Home</NavLink>
                         <NavLink to="about">About</NavLink>
                         <NavLink to="projects">Projects</NavLink>
                         <NavLink to="plans">Campaigns</NavLink>
                         <NavLink to="news">News</NavLink>
                         <NavLink to="contact">Contact</NavLink>
-                        <NavLink to="donate">
-                                Donate
-                        </NavLink>
+                        <NavLink to="donate">Donate</NavLink>
+                        <NavLink to="signup">Sign Up</NavLink>
+                        <NavLink to="login">Login</NavLink>
                     </nav>
+                    <div className="profile">
+                        <NavLink to="profile">Profile</NavLink>
+                    </div>
                 </header>
             <div className="root-layout">
                 <Breadcrumbs/>

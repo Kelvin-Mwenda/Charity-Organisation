@@ -1,5 +1,4 @@
-import { Image, Button } from 'react-bootstrap';
-import { Form } from "react-router-dom"
+import { Form, Image, Button } from 'react-bootstrap';
 
 export default function MonthlyPayment() {
     return (
@@ -17,33 +16,35 @@ export default function MonthlyPayment() {
 
                 <div className="monthly-form">
                     <h1>DONATE NOW</h1>
-                    <Form method="post" action="/monthly">
-                        <label>
-                            <span>How Often: </span>
-                            <select
-                                id="options"
-                                name="options"
-                                required
-                            >
+                    <Form>
+                        <Form.Group controlId="formBasicEmail">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email" placeholder="Enter email" required/>
+                        </Form.Group>
+
+                        <Form.Group controlId="formBasicFrequency">
+                            <Form.Label>How Often</Form.Label>
+                            <Form.Control as="select" required>
                                 <option value="" disabled>
                                     -- Select an option --
                                 </option>
-                                <option value="option1">Weekly</option>
-                                <option value="option2">Fortnight</option>
-                                <option value="option3">Monthly</option>
-                                <option value="option4">Annually</option>
-                            </select>
-                        </label>
+                                <option value="weekly">Weekly</option>
+                                <option value="fortnight">Fortnight</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="annually">Annually</option>
+                            </Form.Control>
+                        </Form.Group>
 
-                        <label>
-                            <span>Amount: </span>
-                            <input type="number" name="amount" placeholder="Amount" required />
-                        </label>
-                        <p><span>Choose Payment</span> secure</p>
-                        <Button as="a" variant="success" className="donate-button">
+                        <Form.Group controlId="formBasicAmount">
+                            <Form.Label>Amount</Form.Label>
+                            <Form.Control type="number" placeholder="$" required/>
+                        </Form.Group>
+
+                        <Button type="submit" variant="success" className="donate-button ms-2">
                             Master Card
                         </Button>
-                        <Button as="a" variant="success" className="donate-button">
+
+                        <Button type="submit" variant="success" className="donate-button ms-2">
                             Visa
                         </Button>
                         <p>

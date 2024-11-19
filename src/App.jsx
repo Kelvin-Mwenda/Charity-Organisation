@@ -20,11 +20,15 @@ import FooterLayout from './components/layouts/FooterLayout.jsx'
 import Donate from './components/pages/Donate.jsx'
 import MonthlyPayment from './components/pages/MonthlyPayment.jsx'
 import OneTime from './components/pages/OneTime.jsx'
+import Signup from './components/pages/Signup.jsx'
+import Login from './components/pages/Login.jsx'
+import Profile from './components/pages/Profile.jsx'
 
 
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
+
       <Route path="/home" element={<HeaderLayout/>} errorElement={<ProjectsError/>}>
         <Route index element={<Home/>}/>
         <Route path="about" element={<About/>}/>
@@ -33,11 +37,16 @@ export default function App() {
         <Route path="news" element={<News/>} loader={newsLoader} />
         <Route path="plans" element={<FutureProjects/>} loader = {futureProjectsLoader} errorElement={<ProjectsError/>}/>
         <Route path="contact" element={<Contact/>} action={contactAction} errorElement={<ProjectsError/>}/>
-        <Route path="donate" element={<Donate/>} errorElement={<ProjectsError/>}/>
-        <Route path="monthly" element={<MonthlyPayment/>}/>
-        <Route path="onetime" element={<OneTime/>}/>
+        <Route path="donate" element={<Donate/>} errorElement={<ProjectsError/>}>
+          <Route path="monthly" element={<MonthlyPayment/>}/>
+          <Route path="onetime" element={<OneTime/>}/>
+        </Route>
+        <Route path="signup" element={<Signup/>}/>
+        <Route path="login" element={<Login/>}/>
+        <Route path="profile" element={<Profile/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Route>
+      
     )
   )
 

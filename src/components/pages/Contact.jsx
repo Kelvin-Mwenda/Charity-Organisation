@@ -1,5 +1,5 @@
-import { Form, redirect, useActionData } from "react-router-dom"
-import {Button} from 'react-bootstrap';
+import {  Form, redirect, useActionData } from "react-router-dom"
+import { Button } from 'react-bootstrap';
 import { faMobileAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {

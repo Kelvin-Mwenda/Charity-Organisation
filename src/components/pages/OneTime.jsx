@@ -1,5 +1,4 @@
-import {Image,Button} from 'react-bootstrap';
-import { Form } from "react-router-dom"
+import {Image,Button, Form } from 'react-bootstrap';
 
 export default function OneTime() {
     return (
@@ -15,25 +14,21 @@ export default function OneTime() {
                     </div>
                 </div>
 
-                <div className="onetime-form">                                                                                                                                                                                                                                                          
+                <div className="onetime-form">                                                                 
                     <h1>DONATE NOW</h1>
-                    <Form method="post" action="/onetime">
-                        <label>
-                            <span>Email: </span>
-                            <input type="email" name="email" placeholder="Email" required />
-                        </label>
-
-                        <label>
-                            <span>Amount: </span>
-                            <input type="number" name="amount" placeholder="Amount" required />
-                        </label>
-
-                        <p><span>Choose Payment</span> secure</p>
-                        
-                        <Button as="a" variant="success" className="donate-button">
+                    <Form>
+                        <Form.Group controlId="formBasicEmail">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email" placeholder="Enter email" required/>
+                        </Form.Group>
+                        <Form.Group controlId="formBasicAmount">
+                            <Form.Label>Amount</Form.Label>
+                            <Form.Control type="number" placeholder="$" required/>
+                        </Form.Group>
+                        <Button type="submit" variant="success" className="donate-button ms-2">
                             Master Card
                         </Button>
-                        <Button as="a" variant="success" className="donate-button">
+                        <Button type="submit" variant="success" className="donate-button ms-2">
                             Visa
                         </Button>
                         <p>
@@ -42,6 +37,7 @@ export default function OneTime() {
                             Problems donating? Visit our FAQ to most common question.  Still having problems? send us an email.
                         </p>
                     </Form>
+                    
                 </div>
             </div>
         </>
