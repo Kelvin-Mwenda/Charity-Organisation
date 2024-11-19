@@ -1,4 +1,4 @@
-import {Image,Button} from 'react-bootstrap';
+import { Image, Button } from 'react-bootstrap';
 import { Form } from "react-router-dom"
 
 export default function MonthlyPayment() {

@@ -25,19 +25,17 @@ import OneTime from './components/pages/OneTime.jsx'
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="home" element={<HeaderLayout/>}>
+      <Route path="/home" element={<HeaderLayout/>} errorElement={<ProjectsError/>}>
         <Route index element={<Home/>}/>
         <Route path="about" element={<About/>}/>
-          <Route path="projects" element={<Projects/>} loader = {projectsLoader} errorElement={<ProjectsError/>}/>
-          <Route path="projects/:id" element={<ProjectsDetails/>} loader = {ProjectDetailsLoader} errorElement={<ProjectsError/>}/>
-          <Route path="news" element={<News/>} loader = {newsLoader} />
-          <Route path="plans" element={<FutureProjects/>} loader = {futureProjectsLoader} errorElement={<ProjectsError/>}/>
+        <Route path="projects" element={<Projects/>} loader = {projectsLoader} errorElement={<ProjectsError/>}/>
+        <Route path="projects/:id" element={<ProjectsDetails/>} loader = {ProjectDetailsLoader} errorElement={<ProjectsError/>}/>
+        <Route path="news" element={<News/>} loader={newsLoader} />
+        <Route path="plans" element={<FutureProjects/>} loader = {futureProjectsLoader} errorElement={<ProjectsError/>}/>
         <Route path="contact" element={<Contact/>} action={contactAction} errorElement={<ProjectsError/>}/>
-        <Route path="donate" element={<Donate/>} errorElement={<ProjectsError/>}>
-          <Route path="monthly" element={<MonthlyPayment/>} errorElement={<ProjectsError/>}/>
-          <Route path="onetime" element={<OneTime/>} errorElement={<ProjectsError/>}/>
-        </Route>
-
+        <Route path="donate" element={<Donate/>} errorElement={<ProjectsError/>}/>
+        <Route path="monthly" element={<MonthlyPayment/>}/>
+        <Route path="onetime" element={<OneTime/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Route>
     )

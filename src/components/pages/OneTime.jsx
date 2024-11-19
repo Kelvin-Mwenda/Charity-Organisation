@@ -15,7 +15,7 @@ export default function OneTime() {
                     </div>
                 </div>
 
-                <div className="onetime-form">
+                <div className="onetime-form">                                                                                                                                                                                                                                                          
                     <h1>DONATE NOW</h1>
                     <Form method="post" action="/onetime">
                         <label>

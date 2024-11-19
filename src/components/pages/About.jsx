@@ -6,7 +6,7 @@ export default function About(){
     const [user,setUser] = useState('chocs')
 
     if(!user){
-        return <Navigate to="/" replace={true}/>
+        return <Navigate to="/home" replace={true}/>
     }
 
     return(
@@ -45,45 +45,45 @@ export default function About(){
                 </div>
 
                 <div className="objectives">
-                <div className="objectives-section">
-                    <div className="vision">
+                    <div className="objectives-section">
+                        <div className="vision">
                             <h1>Our Vision</h1>
-                            <p>A world free of poverty</p>
-                    </div>
+                            <p>A world free of poverty.</p>
+                        </div>
 
-                    <div className="mission">
+                        <div className="mission">
                             <h1>Our Mission</h1>
-                            <p>To propagate and nurture education and self-reliance .</p>
-                    </div>
+                            <p>To propagate and nurture education and self-reliance.</p>
+                        </div>
 
-                    <div className="goal">
+                        <div className="goal">
                             <h1>Our Goal</h1>
                             <p>To empower poor families so that they can meet their basic needs and give a helping hand to others.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div className="about-beneficiaries">
-                <h1 className="about">BENEFICIARIES</h1>
-                <p>WGBED targets well performing children from poor families within the urban and peri-urban settlements. These are mainly identified through referrals and direct contacts. The fund has so far benefited 38 beneficiaries. Currently the program has 18 active beneficiaries (students) while … applications are still pending. The target is to reach and empower ….. children and their families in 2024.</p>
-            </div>
+                <div className="about-beneficiaries">
+                    <h1 className="about">BENEFICIARIES</h1>
+                    <p>WGBED targets well performing children from poor families within the urban and peri-urban settlements. These are mainly identified through referrals and direct contacts. The fund has so far benefited 38 beneficiaries. Currently the program has 18 active beneficiaries (students) while … applications are still pending. The target is to reach and empower ….. children and their families in 2024.</p>
+                </div>
 
-            <div className="about-beneficiaries">
-                <h1 className="about">WGBED PROGRAMS</h1>
-                <p>The main WGBED programs are:
-                    <ol>
-                        <li>Education sponsorship: Aims at meeting the educational needs of the children including school fees and education materials and ensuring that the beneficiaries successfully complete their education journey.</li>
-                        <li>Economic empowerment: Aims at:
-                            <span>
-                                <ul>
-                                    <li>Building the economic capacity of families of the sponsored children to enable them support themselves, meet where possible some of the beneficiaries&#39; educational needs and the educational needs of the beneficiaries&#39; siblings.</li>
-                                    <li>Building the economic base of the organization through the social enterprise for economic sustainability of the fund.</li>
-                                </ul>
-                            </span>
-                        </li>
-                    </ol>
-                </p>
-            </div>
+                <div className="about-beneficiaries">
+                    <h1 className="about">WGBED PROGRAMS</h1>
+                    <p>The main WGBED programs are:
+                        <ol>
+                            <li>Education sponsorship: Aims at meeting the educational needs of the children including school fees and education materials and ensuring that the beneficiaries successfully complete their education journey.</li>
+                            <li>Economic empowerment: Aims at:
+                                <span>
+                                    <ul>
+                                        <li>Building the economic capacity of families of the sponsored children to enable them support themselves, meet where possible some of the beneficiaries&#39; educational needs and the educational needs of the beneficiaries&#39; siblings.</li>
+                                        <li>Building the economic base of the organization through the social enterprise for economic sustainability of the fund.</li>
+                                    </ul>
+                                </span>
+                            </li>
+                        </ol>
+                    </p>
+                </div>
 
                 <Button as="a" variant="success" onClick={() => setUser(null)}>
                     Logout
