@@ -4,18 +4,28 @@
   --primary: rgb(5, 125, 85);
   --secondary: #ffffff;
 }
+
 body {
   margin: 0;
   font-family: 'Times New Roman', Times, serif;
   background: var(--secondary);
 }
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  body p, h1, h2, h3, h4, h5, h6{
+    font-size: 0.9rem;
+  }
+}
+
 * {
   margin: 0;
 }
+
 p {
   margin: 10px 0;
   font-size: 20px;
 }
+
 button {
   border: 0;
   padding: 8px;
@@ -24,6 +34,7 @@ button {
   background: var(--primary);
   cursor: pointer;
 }
+
 .root-layout{
   margin: 0;
   left: 0;
@@ -44,6 +55,7 @@ button {
   text-align: center;
   margin: 0;
 }
+
 .title .logo{
   max-height: 150px;
   width: 150px;
@@ -52,7 +64,9 @@ button {
 
 header{
   background-color: #000000;
+  transition: all 0.1s ease-in-out;
 }
+
 header nav{
   display: flex;
   align-items: center;
@@ -93,19 +107,23 @@ header nav a.active{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  gap: 20px;
   height: 400px;
-  padding: 10px;
+  padding: 4px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: #ffffff;
 }
+
+.home-verse h1{
+  font-size: 3em;
+}
+
 .home-verse1{
   text-align: center;
   width: 50%;
 }
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .home-verse p{
@@ -117,60 +135,335 @@ header nav a.active{
     display: none;
   }
 }
-.home-verse{
-  text-align: center;
+
+/* home Intro */
+.home-intro{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin: 10px auto;
   max-width: 1000px;
 }
-.home-verse h1{
-  
+
+.home-extra{
+  max-width: 1000px;
 }
-/* .about-us{
-  /* display: flex;
-  flex-direction: row;
-  gap: 30px; 
-  justify-content: end; 
+
+/* about us */
+.about-us h1{
+  text-align: center;
 }
-/* .about-us .about-text{
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  margin-right: auto;
+
+.about-image{
+  margin: auto;
+  border: none;
+  border-radius: 4px;
+  max-width: 400px;
+  max-height: 400px;
+}  
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .about-image{
+    max-width: 300px;
+  }
 }
-.about-us .about-image{
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-} */ */
+
 .home-content{
   max-width: 1200px;
-  margin: 20px 100px;
 }
+
 main{
-  
   align-items: center;
   color: #030303;
 }
-.home-intro{
-  margin: auto;
-}
-/* home verse */
-.home-intro .home-verse{
-  text-align: center;
-}
+
 .objectives, .current-situation{
   background: rgb(5, 125, 85);
   padding: 20px;
   align-items: center;
 }
-.objectives-section, .strategy, .sponsors, .current-situation-details, .testimonials{
+
+.objectives-section, .strategy, .sponsors, .current-situation-details, .whats-next, .testimonials{
   max-width: 1200px;
   margin: 20px 100px;
 }
-/* about us */
-.about-us h1{
+
+/* Objectives */
+.objectives-section{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.mission, .vision, .goal{
+  flex: 1;
+  margin: auto;
+  border: none;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 20px;
+  min-height: 250px;
+  min-width: 300px;
+  transition: all 0.3s ease-in-out;
+}
+
+.mission:hover, .vision:hover, .goal:hover{
+  transform: scale(1.05);
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .mission, .vision, .goal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: auto;
+  }
+}
+
+/* STRATEGY */
+.strategy{
+  border: 1px solid black;
+  margin: auto;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 4px 4px 2px rgba(0,0,0,0.5);
+  max-width: 900px;
+}
+
+.strategy h1{
   text-align: center;
+  color: rgb(5, 125, 85);
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .strategy{
+    margin: auto 20px;
+  }
+}
+
+.sponsors{
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+}
+
+.sponsors h1{
+  text-align: center;
+  color: rgb(5, 125, 85);
+}
+
+.marquee-style{
+  display: flex;
+  margin-top: 10px;
+  color: #1c1c1c;
+}
+
+.marquee-style .icon-style{
+  color: #0e0e0e;
+  transition: color 0.3s;
+}
+
+.marquee-style a{
+  gap: 50px;
+  margin: auto 20px;
+}
+
+/* Current Situation */
+.current-situation{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.current-situation-details{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.situation-details1, .situation-details2{
+  margin: auto;
+  border: none;
+  color: #ffffff;
+  min-height: 200px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.whats-next{
+  margin: auto;
+  border: 2px solid hsl(160, 92%, 25%);
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 20px;
+  max-width: 1000px;
+  margin-bottom: -100px;
+  box-shadow: 4px 3px 3px hsl(0, 0%, 0%, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+.whats-next h2{
+  color: rgb(5, 125, 85);
+}
+
+.situation-details1:hover, .situation-details2:hover, .whats-next:hover{
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .current-situation{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: auto 0;
+    padding: 6px;
+  }
+  .current-situation h1{
+    margin: auto 0;
+  }
+  .situation-details1, .situation-details2{
+    margin: auto;
+  }
+  .whats-next{
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+/* Testimonial */
+.testimonials{
+  margin-top: 120px;
+}
+
+.testimonial p, .testimonial h1{
+  font-size: 0.9rem;
+}
+
+.testimonial-container{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonial{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.testimonial::before{
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  z-index: 100;
+  height: 100%;
+  width: 150px;
+}
+.testimonial::after{
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  z-index: 100;
+  height: 100%;
+  width: 150px;
+}
+.testimonial-text{
+  border: 1px solid rgba(8, 8, 8, 0.5);
+  border-radius: 4px;
+  margin: 20px 20px;
+  padding: 30px;
+  max-width: 900px;
+  min-width: 350px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 4px 3px 3px hsl(0, 0%, 0%, 0.3);
+}
+.testimonial::-webkit-scrollbar{
+  display: none;
+}
+.testimonial{
+  scrollbar-width: thin; /* Makes the scrollbar thinner (for Firefox) */
+  scrollbar-color: #888 #f5f5f5; /* Custom scrollbar colors (for Firefox) */
+}
+
+.testimonial::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.testimonial::-webkit-scrollbar-track {
+  background-color: #f5f5f5; /* Color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.scroll-button .icon{
+  color: rgb(5, 125, 85);
+  background-color: #ffffff;
+  border: 1px solid rgb(7, 7, 7);
+  border-radius: 50%;
+  font-size: 30px;
+  outline: none;
+  padding: auto;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: auto;
+}
+
+.testimonial-text p{
+  max-width: 700px;
+  margin: auto;
+}
+
+.testimonial-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  height: 140px;
+  overflow: hidden; /* Ensures the image does not spill outside the div */
+}
+
+.test-image{
+  width: 100%;
+  height: 100vh;
+  max-height: 100px; /* Prevents image height from exceeding parent div */
+  max-width: 100px; /* Prevents image width from exceeding parent div */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .testimonials{
+    margin: 100px 20px;
+  }
+  .testimonials p{
+    font-size: 0.8rem;
+  }
+  .testimonials h3{
+    font-size: 0.9rem;
+  }
 }
 
 /* contact us */
@@ -394,7 +687,24 @@ form label span {
 
 /* footer */
 .footer{
-  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+  background-color: rgb(1, 88, 36);
+  color: #ffffff;
+  margin: 10px 0 0 0;
+}
+.footer-main{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -407,7 +717,10 @@ hr{
   margin: 10px;
 }
 .footer-top{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
   justify-content: end;
   align-items: center;
   margin-bottom: 20px;
