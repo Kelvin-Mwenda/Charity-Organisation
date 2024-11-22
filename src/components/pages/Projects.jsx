@@ -6,43 +6,31 @@ export default function Projects() {
 
     return(
         <>
-            <div className="projects-intro">
-                <div className="projects-intro-title">
-                    <h1 style={{textAlign:'center', color: 'rgb(5, 125, 85)'}}>What We Do</h1>
+            <div className="home-intro">
+                <div className="about-image">
+                    <Image xs={4} src="../src/assets/father.jpg" alt="Company Logo" style={{height:'75%'}} className="about-image"/>
                 </div>
 
-                <div className="projects-intro">
-                    <div className="intro1-image">
-                        <Image src="../src/assets/father.jpg" alt="Company Logo" style={{height:'25%'}}/>
-                    </div>
-                    
-                    <div className="intro1-text">
-                        <h1 style={{textAlign:'center', color: 'rgb(5, 125, 85)'}}>EDUCATION SPONSORSHIP</h1>
+                <div className="about-text">
+                    <h1 className="text-center" style={{color:'#057d55', fontStyle:'bold'}}>What We Do</h1>
+                    <p>
+                        Aims at meeting the educational needs of the children including school fees and education materials and ensuring that the beneficiaries successfully complete their education journey.
+                    </p>
+                </div>
+            </div>
+
+            <div className="home-intro">
+                    <div className="about-text">
+                        <h1 className="text-center" style={{color:'#057d55', fontStyle:'bold'}}>EDUCATION SPONSORSHIP</h1>
                         <p>
                             Aims at meeting the educational needs of the children including school fees and education materials and ensuring that the beneficiaries successfully complete their education journey.
                         </p>
                     </div>
-                </div>
 
-                <div className="projects-intro">
-                    <div className="intro1-text">
-                        <h1 style={{textAlign:'center', color: 'rgb(5, 125, 85)'}}>ECONOMIC EMPOWERMENT</h1>
-                        <p>
-                            <ol>
-                                <li>
-                                    Building the economic capacity of families of the sponsored children to enable them support themselves, meet where possible some of the beneficiaries’ educational needs and the educational needs of the beneficiaries’ siblings.
-                                    </li>
-                                <li>
-                                    Building the economic base of the organization through the social enterprise for economic sustainability of the fund.
-                                </li>
-                            </ol>
-                        </p>
-                    </div>
-                    <div className="intro1-image">
-                        <Image src="../src/assets/father.jpg" alt="Company Logo" style={{height:'25%'}}/>
+                    <div className="about-image">
+                        <Image xs={4} src="../src/assets/father.jpg" alt="Company Logo" style={{height:'75%'}} className="about-image"/>
                     </div>
                 </div>
-            </div>
 
             <h1 style={{textAlign:'center', color: 'rgb(5, 125, 85)'}}>OUR COMPLETED PROJECTS</h1>
             

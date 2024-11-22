@@ -1,6 +1,6 @@
 
 import { Image, Button } from 'react-bootstrap';
-import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import { useTypewriter } from 'react-simple-typewriter'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faInstagram,
@@ -38,11 +38,11 @@ export default function Home () {
     return(
         <>
             <div className="hero-section" style={{backgroundImage : 'url(../src/assets/schoolsupplies.jpg)'}}>
-                <div className="home-verse text-center">
+                <div className="home-verse">
                     <h1 className="mb-2">Empowering Communities with {''} 
-                        <span>
+                        <span style={{color:'#00b60f'}}>
                             {text}
-                            <Cursor />
+                            {/* <Cursor cusorStyle={{ visibility: 'hidden', display:'none' }} /> */}
                         </span>
                     </h1>
                 
@@ -55,7 +55,7 @@ export default function Home () {
             <div className="home-content">
                 <div className="home-intro">
                     <div className="about-text">
-                        <h1 className="text-center">ABOUT US</h1>
+                        <h1 className="text-center" style={{color:'#057d55', fontStyle:'bold'}}>ABOUT US</h1>
                         <p>
                             The <b>Fr. Wasonga Education and Development</b> Fund is a non-governmental organization supporting the educational and development needs of Children with a special focus on girls who have over the years, been exposed to different types of vulnerabilities, and the boy child, whose plight is emerging as a key issue of concern in the modern world.
                         </p>
@@ -160,7 +160,7 @@ export default function Home () {
 
                 <div className="testimonial-container">
                     <div className="scroll-button ms-2">
-                        <Button variant="success" className="icon" onClick={() => {scrollleft()}}>
+                        <Button variant="success" className="icon" onClick={() => {scrollright()}}>
                             <FontAwesomeIcon icon={faAngleDoubleLeft} />
                         </Button>
                     </div>
@@ -222,7 +222,7 @@ export default function Home () {
                     </div>
 
                     <div className="scroll-button">
-                        <Button variant="success" className="icon" onClick={scrollright}>
+                        <Button variant="success" className="icon" onClick={scrollleft}>
                             <FontAwesomeIcon icon={faAngleDoubleRight} />
                         </Button>
                     </div>
