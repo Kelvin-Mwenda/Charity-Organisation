@@ -794,12 +794,16 @@ hr{
   padding: 10px;
   justify-content: end;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 8px;
+}
+.footer-top p{
+  font-size: 14px;
 }
 .footer-bottom p{
   text-align: center;
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 .left-section{
   flex: 1;

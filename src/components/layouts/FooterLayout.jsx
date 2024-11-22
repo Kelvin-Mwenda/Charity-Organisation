@@ -1,5 +1,4 @@
 // Footer.js
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faInstagram,
