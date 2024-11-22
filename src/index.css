@@ -51,15 +51,15 @@ button {
   right: 0;
   padding: 10px;
   color: black;
-  background: hsla(160, 92%, 25%, 0.893);
+  background: hsla(0, 0%, 100%, 0.893);
   text-align: center;
+  font-style: bold;
   margin: 0;
 }
 
 .title .logo{
-  max-height: 150px;
-  width: 150px;
-  border-radius: 50%;
+  height: 100px;
+  width: 100px;
 }
 
 header{
@@ -115,8 +115,14 @@ header nav a.active{
   color: #ffffff;
 }
 
+.home-verse{
+  text-align: center;
+  width: 100%;
+}
+
 .home-verse h1{
   font-size: 3em;
+  width: 100%;
 }
 
 .home-verse1{
@@ -133,6 +139,16 @@ header nav a.active{
   }
   .title Image{
     display: none;
+  }
+  .title-description h1{
+    font-size: 0.9rem;
+  }
+  .title-description p{
+    display: none;
+  }
+  .logo{
+    max-width: 50px;
+    max-height: 50px;
   }
 }
 
@@ -347,25 +363,36 @@ main{
   margin-top: 120px;
 }
 
+.testimonials h1{
+  color: rgb(5, 125, 85);
+}
+
 .testimonial p, .testimonial h1{
   font-size: 0.9rem;
 }
 
 .testimonial-container{
-  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  max-width: 900px;
+  margin: auto;
 }
 
 .testimonial{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  max-width: 375px;
   align-items: center;
+  gap: 25px;
   overflow: auto;
   scroll-behavior: smooth;
+}
+
+.testimonial::-webkit-scrollbar{
+  display: none;
 }
 
 .testimonial::before{
@@ -387,32 +414,15 @@ main{
   width: 150px;
 }
 .testimonial-text{
-  border: 1px solid rgba(8, 8, 8, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
   border-radius: 4px;
-  margin: 20px 20px;
-  padding: 30px;
-  max-width: 900px;
+  padding: 20px;
   min-width: 350px;
   overflow: hidden;
-  cursor: pointer;
-  box-shadow: 4px 3px 3px hsl(0, 0%, 0%, 0.3);
-}
-.testimonial::-webkit-scrollbar{
-  display: none;
-}
-.testimonial{
-  scrollbar-width: thin; /* Makes the scrollbar thinner (for Firefox) */
-  scrollbar-color: #888 #f5f5f5; /* Custom scrollbar colors (for Firefox) */
-}
-
-.testimonial::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color of the scrollbar thumb */
-  border-radius: 10px; /* Rounded corners for the thumb */
-}
-
-.testimonial::-webkit-scrollbar-track {
-  background-color: #f5f5f5; /* Color of the scrollbar track */
-  border-radius: 10px; /* Rounded corners for the track */
 }
 
 .scroll-button .icon{
@@ -423,9 +433,17 @@ main{
   font-size: 30px;
   outline: none;
   padding: auto;
-  cursor: pointer;
   transition: all 0.3s ease-in-out;
-  margin: auto;
+  margin: auto 20px;
+}
+
+.icon:hover{
+  transform: scale(1.05);
+}
+
+.scroll-button{
+  padding: auto;
+  cursor: pointer;
 }
 
 .testimonial-text p{
@@ -434,34 +452,87 @@ main{
 }
 
 .testimonial-image{
-  display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
   padding: 10px;
   height: 140px;
+  width: 100%;
   overflow: hidden; /* Ensures the image does not spill outside the div */
 }
 
-.test-image{
+.testimonial-image .test-image{
   width: 100%;
   height: 100vh;
   max-height: 100px; /* Prevents image height from exceeding parent div */
   max-width: 100px; /* Prevents image width from exceeding parent div */
   border-radius: 50%; /* Makes the image circular */
   object-fit: cover;
+  box-shadow: 4px 3px 3px hsl(0, 0%, 0%, 0.3);
   transition: all 0.3s ease-in-out;
+}
+
+.test-image:hover{
+  transform: scale(1.05);
 }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .testimonials{
-    margin: 100px 20px;
+    margin: 100px auto;
   }
   .testimonials p{
     font-size: 0.8rem;
   }
   .testimonials h3{
+    font-size: 0.9rem;
+  }
+  .testimonial-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    gap: 10px;
+  }
+  .testimonial{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: auto 10px;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+  .testimonial .testimonial-text{
+    height: 300px;
+    width: 100%;
+    font-size: 8px;
+    padding: auto;
+    margin: 0;
+    overflow: hidden;
+  }
+  .testimonial-text .test-image, .testimonial-image{
+    display: none;
+    content: none;
+    height: 0;
+    margin: 0;
+  }
+  .testimonial-text .test-text{
+    margin: 0;
+  }
+  .testimonial-text .test-text p,h3{
+    width: 50%;
+    margin: 0;
+  }
+  .scroll-button{
+    border: none;
+    padding: auto;
+  }
+  .scroll-button .icon{
+    border: none;
     font-size: 0.9rem;
   }
 }
@@ -766,3 +837,4 @@ hr{
   border-radius: 6px;
   border: 2px solid rgb(255, 254, 254);
 }
+

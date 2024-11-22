@@ -10,11 +10,13 @@ import {
     faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 import { faAngleDoubleLeft, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
+import 'bootstrap/scss/bootstrap.scss';
+
 
 
 
 export default function Home () {
-    const {text} = useTypewriter(
+    const [text] = useTypewriter(
         {
             words: ["Compassion", "Hope", "Love"],
             typeSpeed: 150,
@@ -24,19 +26,19 @@ export default function Home () {
     )
 
     function scrollleft(){
-        var left = document.querySelector('.testimonial-text');
-        left.scrollBy(350,0);
+        var left = document.querySelector('.testimonial');
+        left.scrollBy(370,0);
     }
 
     function scrollright(){
-        var right = document.querySelector('.testimonial-text');
-        right.scrollBy(-350,0);
+        var right = document.querySelector('.testimonial');
+        right.scrollBy(-370,0);
     }
 
     return(
         <>
             <div className="hero-section" style={{backgroundImage : 'url(../src/assets/schoolsupplies.jpg)'}}>
-                <div className="home-verse text-left">
+                <div className="home-verse text-center">
                     <h1 className="mb-2">Empowering Communities with {''} 
                         <span>
                             {text}
@@ -157,8 +159,8 @@ export default function Home () {
                 </h1>
 
                 <div className="testimonial-container">
-                    <div className="scroll-button">
-                        <Button variant="success" className="icon" onClick={scrollleft}>
+                    <div className="scroll-button ms-2">
+                        <Button variant="success" className="icon" onClick={() => {scrollleft()}}>
                             <FontAwesomeIcon icon={faAngleDoubleLeft} />
                         </Button>
                     </div>
@@ -169,40 +171,52 @@ export default function Home () {
                             <div className="testimonial-image">
                                 <img src="./src/assets/contact-us.jpg" alt="testimonial image" className="test-image"/>
                             </div>
-                            <h3 className="text-center">Halima</h3>
-                            <p className="text-center">
-                                “The impact of AAM Nation Care extends beyond education. They have provided essential medical care that was previously out of reach for us. Regular health check-ups and access to necessary treatments have improved our family&#39;s overall well-being. Knowing that my children are healthy brings me immense peace of mind.”
-                            </p>
+                            <div className="test-text">
+                                <h3 className="text-center">Halima</h3>
+                                <p className="text-center">
+                                    “The impact of AAM Nation Care extends beyond education. They have provided essential medical care that was previously out of reach for us. Regular health check-ups and access to necessary treatments have improved our family&#39;s overall well-being. Knowing that my children are healthy brings me immense peace of mind.”
+                                </p>
+                            </div>
+                            
                         </div>
 
                         <div className="testimonial-text">
                             <div className="testimonial-image">
                                 <img src="./src/assets/contact-us.jpg" alt="testimonial image" className="test-image"/>
                             </div>
-                            <h3 className="text-center">Halima</h3>
-                            <p className="text-center">
-                                “The impact of AAM Nation Care extends beyond education. They have provided essential medical care that was previously out of reach for us. Regular health check-ups and access to necessary treatments have improved our family&#39;s overall well-being. Knowing that my children are healthy brings me immense peace of mind.”
-                            </p>
+                            <div className="test-text">
+                                <h3 className="text-center">Halima</h3>
+                                <p className="text-center">
+                                    “The impact of AAM Nation Care extends beyond education. They have provided essential medical care that was previously out of reach for us. Regular health check-ups and access to necessary treatments have improved our family&#39;s overall well-being. Knowing that my children are healthy brings me immense peace of mind.”
+                                </p>
+                            </div>
+                            
                         </div>
 
                         <div className="testimonial-text">
                             <div className="testimonial-image">
                                 <img src="./src/assets/contact-us.jpg" alt="testimonial image" className="test-image"/>
                             </div>
-                            <h3 className="text-center">Halima</h3>
-                            <p className="text-center">
-                                “The impact of AAM Nation Care extends beyond education. They have provided essential medical care that was previously out of reach for us. Regular health check-ups and access to necessary treatments have improved our family&#39;s overall well-being. Knowing that my children are healthy brings me immense peace of mind.”
-                            </p>
+                            <div className="test-text">
+                                <h3 className="text-center">Halima</h3>
+                                <p className="text-center">
+                                    “The impact of AAM Nation Care extends beyond education. They have provided essential medical care that was previously out of reach for us. Regular health check-ups and access to necessary treatments have improved our family&#39;s overall well-being. Knowing that my children are healthy brings me immense peace of mind.”
+                                </p>
+                            </div>
+                            
                         </div>
 
                         <div className="testimonial-text">
                             <div className="testimonial-image">
                                 <img src="./src/assets/contact-us.jpg" alt="testimonial image" className="test-image"/>
                             </div>
-                            <h3 className="text-center">Halima</h3>
-                            <p className="text-center">
-                                “The impact of AAM Nation Care extends beyond education. They have provided essential medical care that was previously out of reach for us. Regular health check-ups and access to necessary treatments have improved our family&#39;s overall well-being. Knowing that my children are healthy brings me immense peace of mind.”
-                            </p>
+                            <div className="test-text">
+                                <h3 className="text-center">Halima</h3>
+                                <p className="text-center">
+                                    “The impact of AAM Nation Care extends beyond education. They have provided essential medical care that was previously out of reach for us. Regular health check-ups and access to necessary treatments have improved our family&#39;s overall well-being. Knowing that my children are healthy brings me immense peace of mind.”
+                                </p>
+                            </div>
+                            
                         </div>
 
                     </div>
