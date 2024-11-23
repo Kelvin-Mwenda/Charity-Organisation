@@ -1,5 +1,5 @@
-import {  Form, redirect, useActionData } from "react-router-dom"
-import { Button } from 'react-bootstrap';
+import { redirect, useActionData } from "react-router-dom"
+import { Form, Button} from 'react-bootstrap';
 import { faMobileAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -16,65 +16,72 @@ export default function Contact() {
 
     return(
         <>
-            <div className="contact">
-                <div className="contact-header">
-                    <h1>Contact Us</h1>
-                </div>
+            <div className="home-intro">
+                
 
-                <div className="contact-us">
-                    <div className="contact-us-form">
-                        <Form method="post" action="/contact">
-                            <label>
-                                <span>Your Full name: </span>
-                                <input type="name" name="name" required />
-                            </label>
+                <div className="contact">
+                    <h1 className="text-center">Contact Us</h1>
+                    <div className="contact-us">
+                        <div className="contact-us-form">
+                            <Form method="post" action="/contact">
+                                <Form.Group controlId="formBasicName">
+                                    <Form.Label>Your Full name</Form.Label>
+                                    <Form.Control type="name" name="name" placeholder="Full name" style={{fontStyle: 'oblique', border:'1px solid #057d55', marginBottom:'10px'}} required/>
+                                </Form.Group>
+                                <Form.Group controlId="formBasicEmail">
+                                    <Form.Label>Your email</Form.Label>
+                                    <Form.Control type="email" name="email" placeholder="Email" style={{fontStyle: 'oblique', border:'1px solid #057d55', marginBottom:'10px'}} required/>
+                                </Form.Group>
+                                {data && data.error && <p>{data.error}</p>}
+                                <Form.Group controlId="formBasicMessage">
+                                    <Form.Label>Your Message</Form.Label>
+                                    <Form.Control 
+                                        as="textarea" 
+                                        name="message" 
+                                        rows={4} 
+                                        placeholder="Write your message here" style={{fontStyle: 'oblique', border:'1px solid #057d55', marginBottom:'20px'}} 
+                                        required 
+                                    />
+                                </Form.Group>
+                                <Button variant="success" type="submit">
+                                    Submit
+                                </Button>
+                            </Form>
+                        </div>
 
-                            <label>
-                                <span>Your email: </span>
-                                <input type="email" name="email" required />
-                            </label>
+                        <div className="contact-us-brief">
+                            <div><p></p><p>123 Charity Avenue</p></div>
+                            <div><p></p><p>ELDORET,  KENYA, 30100</p></div>
+                            <div>
+                                <p><FontAwesomeIcon icon={faMobileAlt} size="1x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/></p>
+                                <p style={{marginLeft:'-10px'}}>0720803208</p>
+                            </div>
+                            <div>
+                                <p><FontAwesomeIcon icon={faEnvelope} size="1x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/></p> 
+                                    <p>wasilpaul@yahoo.com </p>
+                            </div>
 
-                            {data && data.error && <p>{data.error}</p>}
-
-                            <label>
-                                <span>Your message: </span>
-                                <textarea name="message" required></textarea>
-                            </label>
-                            <Button as="a" variant="success" className="donate-button">
-                                Submit
-                            </Button>
-                        </Form>
-                    </div>
-
-                    <div className="contact-us-brief">
-                        <p>
-                            <span><FontAwesomeIcon icon={faMobileAlt} size="2x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/></span>
-                                0720803208
-                        </p>
-                        <p>
-                            <span><FontAwesomeIcon icon={faEnvelope} size="2x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/></span>
-                                wasilpaul@yahoo.com 
-                        </p>
-
-                        {/* Social Media Icons */}
-                        <div className="social-media-styles">
-                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faInstagram} size="2x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/>
-                            </a>
-                            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faTiktok} size="2x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/>
-                            </a>
-                            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faLinkedin} size="2x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/>
-                            </a>
-                            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faTwitter} size="2x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/>
-                            </a>
-                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faFacebook} size="2x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/>
-                            </a>
+                            {/* Social Media Icons */}
+                            <div className="social-media-styles">
+                                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faInstagram} size="2x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/>
+                                </a>
+                                <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faTiktok} size="2x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/>
+                                </a>
+                                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faLinkedin} size="2x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/>
+                                </a>
+                                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faTwitter} size="2x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/>
+                                </a>
+                                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon={faFacebook} size="2x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/>
+                                </a>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </>

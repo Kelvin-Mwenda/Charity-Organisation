@@ -73,6 +73,7 @@ header{
 }
 
 header nav{
+  flex: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -82,13 +83,75 @@ header nav{
   margin: 0 auto;
 }
 
-header .profile a{
-  text-decoration: none;
-  padding: 10px;
+header .profile{
+  height: 45px;
+  width: 45px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+  margin-right: -250px;
+}
+
+.profile .my-profile{
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  padding: 15px;
   border: 1px solid #06d18d;
   border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+}
+
+header .profile div a:hover{
+  text-decoration: none;
+  background: #00000000;
+  color: #02020200;
+
+}
+
+.profile .my-profile:hover{
+  transform: scale(1.05);
+}
+
+.profile .my-profile.active{
+  border: 1px solid #06d18d;
+  border-radius: 4px;
+}
+
+header .profile a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header .profile a{
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 4px;
   color: #06d18d;
-  margin: auto 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+header .profile a:hover{
+  background: #06d18d;
+  color: #ffffff;
+}
+
+header .profile a.active{
+  color: #06d18d;
+  border: 1px solid #06d18d;
+  border-radius: 4px;
+  background-color: #00000096;
 }
 
 header nav a{
@@ -101,11 +164,11 @@ header nav a{
 
 header nav a:hover{
   background: #06d18d;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 header nav a.active{
-  color: rgb(6, 209, 141);
+  color: #06d18d;
   border: 1px solid #06d18d;
   border-radius: 4px;
   background-color: #00000096;
@@ -439,7 +502,7 @@ main{
 }
 
 .scroll-button .icon{
-  color: rgb(5, 125, 85);
+  color: #057d55;
   background-color: #ffffff;
   border: 1px solid rgb(7, 7, 7);
   border-radius: 50%;
@@ -561,23 +624,80 @@ main{
   gap: 20px;
   margin: 50px 0;
 }
-.contact-us h1{
-  text-align: start;
+.contact h1{
+  color: #057d55;
 }
 .contact-us-form{
   flex: 1;
   margin-right: auto;
 }
+.contact-us-form Form{
+  color: #057d55;
+  font-size: large;
+}
 .contact-us-brief{
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: auto;
   align-items: center;
   text-align: center;
-  font-size: 1.2rem;
-  background-position: center;
+  font-size: 0.9rem;
+  padding: auto;
+  margin: auto;
+}
+
+.contact-us-brief div{
+  font-size: small;
+  min-width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  padding: auto;
+  margin: auto;
+}
+
+/* Login */
+.sign-up{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 0;
-  margin: 0;
+  background-position: center;
+  padding: 20px;
+}
+
+.sign-up h1{
+  color: #057d55;
+}
+
+.login-intro{
+  background-color: #030303aa;
+  border: none;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 20px auto;
+  min-width: 700px;
+}
+
+.login-intro h1{
+  color: #057d55;
+}
+
+.login-intro Form{
+  color: #06d18d;
+  font-size: large;
+  min-width: 400px;
 }
 
 /* actions */
@@ -782,25 +902,6 @@ main{
   text-decoration: none;
 }
 
-/* contact form */
-form {
-  margin-top: 30px;
-}
-
-form input, form label span, form textarea {
-  display: block;
-}
-form input, form textarea {
-  margin-bottom: 30px;
-  padding: 8px;
-  border-radius: 4px;
-  border: 2px solid black;
-  width: 300px;
-  color: black;
-}
-form label span {
-  margin-bottom: 10px;
-}
 
 /* footer */
 .footer{

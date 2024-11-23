@@ -14,15 +14,15 @@ export default function About(){
                         <div className="about-text">
                             <h1 className="text-center" style={{color:'#057d55', fontStyle:'bold'}}>ABOUT US</h1>
                             <p>
-                                The <b>Fr. Wasonga Education and Development</b> Fund is a non-governmental organization supporting the educational and development needs of Children with a special focus on girls who have over the years, been exposed to different types of vulnerabilities, and the boy child, whose plight is emerging as a key issue of concern in the modern world.
+                                The <b>Fr. Wasonga Education and Development Fund</b> is a non-governmental organization supporting the educational and development needs of Children with a special focus on girls who have over the years, been exposed to different types of vulnerabilities, and the boy child, whose plight is emerging as a key issue of concern in the modern world.
                             </p>
                         </div>
-                </div>
+                    </div>
                 <div className="home-intro">
                     <div className="about-text">
                         <p>
                             The Wasonga Girls and Boy Education and Development Fund (WGBED) is founded on the Christ&#39;s teaching in Mathew 25: 40 
-                    “…Whatever you did to one of the least of these brothers and sisters of mine, you did for me.” The fund was formally instituted in the year. However, a lot of education support activities had taken place before then, and now the fund boasts of 20 beneficiaries, some of whom have transited to employment while …. are still in school.
+                            “…Whatever you did to one of the least of these brothers and sisters of mine, you did for me.” The fund was formally instituted in the year. However, a lot of education support activities had taken place before then, and now the fund boasts of 20 beneficiaries, some of whom have transited to employment while …. are still in school.
                         </p>
                     </div>
 

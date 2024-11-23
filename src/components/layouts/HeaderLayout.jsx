@@ -22,21 +22,25 @@ export default function Header(){
                 </div>
             </div>
             
-            <header className="justify-content-center sticky-top">
+            <header className="sticky-top">
                 <nav> 
-                    <NavLink to="/home">Home</NavLink>
+                    <NavLink to="/">Home</NavLink>
                     <NavLink to="about">About</NavLink>
                     <NavLink to="projects">Projects</NavLink>
                     <NavLink to="plans">Campaigns</NavLink>
                     <NavLink to="news">News</NavLink>
                     <NavLink to="contact">Contact</NavLink>
                     <NavLink to="donate">Donate</NavLink>
-                    <NavLink to="signup">Sign Up</NavLink>
-                    <NavLink to="login">Login</NavLink>
                 </nav>
-                <div className="profile rounded-circle justify-content-end">
-                    <NavLink to="profile">Profile</NavLink>
-                </div>
+                <div className="profile">
+                        <NavLink to="signup">Sign Up</NavLink>
+                        <NavLink to="login">Login</NavLink>
+                        <div>
+                            <NavLink to="profile" className="my-profile" style={{backgroundImage : 'url(../src/assets/father.jpg)'}}></NavLink>
+                        </div>
+                        
+                    </div>
+                
             </header>
 
             <div className="root-layout">
