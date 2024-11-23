@@ -15,13 +15,14 @@ export default function Header(){
             <div className="title">
                 <Image xs={3} src="../src/assets/wasonga.jpg" alt="Company Logo" className="logo d-md-none d-lg-block"/>
                 <div className="title-description" style={{color:'rgb(5, 125, 85)',fontSize: '0.5rem',margin:'0'}}>
-                    <h1>FR. WASONGA’S GIRLS AND BOY EDUCATIONAL AND DEVELOPMENT FUND</h1>
+                    <h1>FR. WASONGA&#39;S GIRLS AND BOY EDUCATIONAL AND DEVELOPMENT FUND</h1>
                     <p  style={{fontSize: '12px',margin:'0'}}>P. O. Box 5145 – 30100 ELDORET – KENYA
                         TEL: 0720803208, EMAIL: wasilpaul@yahoo.com 
                     </p>
                 </div>
             </div>
-            <header className="shadow-lg justify-content-center sticky-top ms-0" style={{margin: "0 -20px 0 -20px"}}>
+            
+            <header className="justify-content-center sticky-top">
                 <nav> 
                     <NavLink to="/home">Home</NavLink>
                     <NavLink to="about">About</NavLink>
@@ -32,11 +33,10 @@ export default function Header(){
                     <NavLink to="donate">Donate</NavLink>
                     <NavLink to="signup">Sign Up</NavLink>
                     <NavLink to="login">Login</NavLink>
-                    <div className="profile">
-                        <NavLink to="profile">Profile</NavLink>
-                    </div>
                 </nav>
-                
+                <div className="profile rounded-circle justify-content-end">
+                    <NavLink to="profile">Profile</NavLink>
+                </div>
             </header>
 
             <div className="root-layout">

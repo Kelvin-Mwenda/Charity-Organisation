@@ -51,7 +51,7 @@ button {
   right: 0;
   padding: 10px;
   color: black;
-  background: hsla(0, 0%, 100%, 0.893);
+  background: #ffffffe4;
   text-align: center;
   font-style: bold;
   margin: 0;
@@ -63,43 +63,52 @@ button {
 }
 
 header{
-  background-color: #000000;
-  transition: all 0.1s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding:auto;
+  margin:auto 0;
 }
 
 header nav{
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 20px;
   gap: 16px;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
-header nav h1{ 
-  flex: 1;
-  margin-right: auto;
+header .profile a{
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #06d18d;
+  border-radius: 50%;
+  color: #06d18d;
+  margin: auto 10px;
 }
 
 header nav a{
   text-decoration: none;
   padding: 6px;
   border-radius: 4px;
-  color: rgb(6, 209, 141);
+  color: #06d18d;
   transition: all 0.3s ease-in-out;
 }
 
 header nav a:hover{
-  background: #ffffff;
-  color: rgb(6, 209, 141);
+  background: #06d18d;
+  color: rgb(255, 255, 255);
 }
 
 header nav a.active{
-  background: #ffffff;
   color: rgb(6, 209, 141);
-  border: none;
+  border: 1px solid #06d18d;
   border-radius: 4px;
+  background-color: #00000096;
 }
 
 /* page content */
@@ -325,7 +334,7 @@ main{
 
 .whats-next{
   margin: auto;
-  border: 2px solid hsl(160, 92%, 25%);
+  border: 1px solid hsl(160, 92%, 25%);
   border-radius: 4px;
   background: #ffffff;
   padding: 20px;
@@ -621,6 +630,7 @@ main{
 .projects h1 {
   text-align: center;
 }
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -641,6 +651,7 @@ main{
   margin: 10px 0;
   text-decoration: none;
 }
+
 .projects > li {
   display: block;
   background: rgba(226, 230, 231, 0.758);
@@ -649,16 +660,17 @@ main{
   margin: 10px 0;
   text-decoration: none;
 }
-.projects h2{
+
+.projects h2, .projects h4{
   color: rgb(106, 230, 106);
 }
+
 .projects p {
   color: rgb(255, 255, 255);
-}
-.projects p {
+  font-size: 0.99rem;
   margin: 0;
-  transition: all ease-in-out 0.2s;
 }
+
 .projects .last-child {
   font-size: 0.8em;
   color: #d1cbcb;
@@ -672,20 +684,48 @@ main{
   padding: 10px;
   background-color: #454040;
 }
+
 .projects-image{
   height: auto;
   width: auto;
   margin: auto;
 }
+
 .projects-details .last-child, .projects-details h2{
   color: #ffffff;
 }
+
 .projects-details h2{
   text-align: center;
 }
+
 .details-id{
   display: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .projects{
+    max-height: 300px;
+  }
+}
+
+/* about */
+.about-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 4px;
+  margin: auto;
+}
+
+.about-text p{
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
 
 /* news list */
 .news h4 {
@@ -699,7 +739,7 @@ main{
   padding: 4px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
 }
 
 .news > li {

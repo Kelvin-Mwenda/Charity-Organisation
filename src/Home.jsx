@@ -57,7 +57,7 @@ export default function Home () {
                     <div className="about-text">
                         <h1 className="text-center" style={{color:'#057d55', fontStyle:'bold'}}>ABOUT US</h1>
                         <p>
-                            The <b>Fr. Wasonga Education and Development</b> Fund is a non-governmental organization supporting the educational and development needs of Children with a special focus on girls who have over the years, been exposed to different types of vulnerabilities, and the boy child, whose plight is emerging as a key issue of concern in the modern world.
+                            The <b>Fr. Wasonga Education and Development Fund</b> is a non-governmental organization supporting the educational and development needs of Children with a special focus on girls who have over the years, been exposed to different types of vulnerabilities, and the boy child, whose plight is emerging as a key issue of concern in the modern world.
                         </p>
                     </div>
                     <div className="about-image">

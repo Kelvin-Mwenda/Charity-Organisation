@@ -5,16 +5,14 @@ export default function News() {
     
     return(
         <>
-            <h1>News</h1>
-            <div className="news">
+            <h1 className="text-center" style={{color:'#057d55', fontStyle:'bold'}}>News</h1>
+            <div className="projects">
                 {news.map(project => (
                     <li key={project.id} style={{ backgroundImage: `url(../src/assets/${project.image})`}}>
-                        <div className="news">
-                            <h4>{project.title}</h4>
-                            <p>{project.content}</p>
-                            <p><i style={{color:"white"}}>{project.author}</i></p>
-                            <p><i style={{color:"white"}}>{project.date}</i></p>
-                        </div>
+                        <h4>{project.title}</h4>
+                        <p>{project.content}</p>
+                        <p><i style={{color:"white"}}>{project.author}</i></p>
+                        <p><i style={{color:"white"}}>{project.date}</i></p>
                     </li>
                 ))}
             </div>

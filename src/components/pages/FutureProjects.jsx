@@ -5,7 +5,7 @@ export default function FutureProjects() {
 
     return (
         <>
-            <h1>Future Projects</h1>
+            <h1 className="text-center" style={{color:'#057d55', fontStyle:'bold'}}>Future Projects</h1>
             <div className="projects">
                 {futureProjects.map(project => (
                     <li key={project.id} to={`/futureProjects/${project.id}`} style={{ backgroundImage: `url(../src/assets/${project.image})`}}>
