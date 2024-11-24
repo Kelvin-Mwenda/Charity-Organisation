@@ -14,7 +14,7 @@ export default function Donate() {
                 </div>
             </div>
 
-            <div className="donation-method">
+            <div className="home-intro">
                 <div className="one-time">
                     <h1>GIVE NOW</h1>
                     <p>Take action by making a tax-deductible donation to invisible children.</p>
@@ -25,7 +25,7 @@ export default function Donate() {
                     <h1>Recurring Donation</h1>
                     <p>Donate to Invisible Children on recurring basis and become a Fourth Estate Member.</p>
                     <NavLink to="monthly">Recurring Donation</NavLink>
-            </div>
+                </div>
             </div>
 
             <main>

@@ -1,12 +1,22 @@
-import { Form, Image, Button } from 'react-bootstrap';
+import { useState } from 'react';
+import {Image,Button, Form } from 'react-bootstrap';
+import { Navigate } from 'react-router-dom';
 
 export default function MonthlyPayment() {
+    const [send,setSend] = useState(false);
+
+    function contact() {
+        setSend(true);
+    }
+
     return (
         <>
-            <div className="monthly-body">
-                <div className="monthly-banner">
-                    <div className="banner-image">
-                        <Image src="../src/assets/youth.jpg" alt="Company Logo" style={{height:'25%'}}/>
+            {send && <Navigate to="contact" replace={true} />}
+
+            <div className="one-timeP">
+                <div className="onetime-banner">
+                    <div className="banner-image mb-5">
+                        <Image src="../src/assets/youth.jpg" alt="Company Logo" className="img-fluid"/>
                     </div>
 
                     <div className="banner-text">
@@ -14,16 +24,16 @@ export default function MonthlyPayment() {
                     </div>
                 </div>
 
-                <div className="monthly-form">
-                    <h1>DONATE NOW</h1>
+                <div className="onetime-form">
+                    <h1>RECURRING DONATION</h1>
                     <Form>
-                        <Form.Group controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
+                        <Form.Group controlId="formBasicEmail" className="mb-3">
+                            <Form.Label style={{color:'#057d55'}}>Email address</Form.Label>
                             <Form.Control type="email" placeholder="Enter email" required/>
                         </Form.Group>
 
-                        <Form.Group controlId="formBasicFrequency">
-                            <Form.Label>How Often</Form.Label>
+                        <Form.Group controlId="formBasicFrequency" className="mb-3">
+                            <Form.Label style={{color:'#057d55'}}>How Often</Form.Label>
                             <Form.Control as="select" required>
                                 <option value="" disabled>
                                     -- Select an option --
@@ -35,24 +45,29 @@ export default function MonthlyPayment() {
                             </Form.Control>
                         </Form.Group>
 
-                        <Form.Group controlId="formBasicAmount">
-                            <Form.Label>Amount</Form.Label>
-                            <Form.Control type="number" placeholder="$" required/>
+                        <Form.Group controlId="formBasicAmount" className="mb-3">
+                            <Form.Label style={{color:'#057d55'}}>Amount</Form.Label>
+                            <Form.Control type="number" placeholder="$ | Amount" required/>
                         </Form.Group>
 
-                        <Button type="submit" variant="success" className="donate-button ms-2">
-                            Master Card
-                        </Button>
-
-                        <Button type="submit" variant="success" className="donate-button ms-2">
-                            Visa
-                        </Button>
-                        <p>
-                            Please read our privacy policy here.  Your payment details will be processed by Braintree, a PayPal company ( for credit/debit cards ) or PayPal  a record of your donations will be stored by our organisatioin. 
-                            <span>Other ways to give : SEPA/BACS I Check I Bitcoin</span>
-                            Problems donating? Visit our FAQ to most common question.  Still having problems? send us an email.
-                        </p>
+                        <div className="justify-content-center mb-3">
+                            <Button type="submit" variant="success" className="donate-button ms-5">
+                                Master Card
+                            </Button>
+                            <Button type="submit" variant="success" className="donate-button ms-3">
+                                Visa
+                            </Button>
+                        </div>
+                        
                     </Form>
+                    <p>
+                        Please read our privacy policy here.  Your payment details will be processed by Braintree, a PayPal company ( for credit/debit cards ) or PayPal  a record of your donations will be stored by our organisatioin. <br/>
+                        <span>Other ways to give : <b><i>SEPA/BACS I Check I Bitcoin</i></b></span><br/>
+                        Problems donating? Visit our FAQ to most common question.  Still having problems? 
+                        <Button onClick={contact} className="ms-0 p-0" style={{textDecoration:'none', color:'#057d55', cursor:'pointer', backgroundColor:'transparent', border:'none'}}>
+                            send us an email.
+                        </Button>
+                    </p>
                 </div>
             </div>
         </>

@@ -1,4 +1,5 @@
 
+//import FooterLayout from '../src/components/layouts/FooterLayout.jsx'
 import { Image, Button } from 'react-bootstrap';
 import { useTypewriter } from 'react-simple-typewriter'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -229,6 +230,7 @@ export default function Home () {
                 </div>
             </div>
 
+            {/* <FooterLayout/> */}
         </>
     )
 }

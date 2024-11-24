@@ -62,14 +62,32 @@ button {
   width: 100px;
 }
 
-header{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  padding:auto;
-  margin:auto 0;
+header {
+    position: relative; /* To enable layering with pseudo-elements */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff3b;
+    background-color: #ffffff3b; /* Semi-transparent background */
+    padding: 10px; /* Adjust padding as needed */
+    margin: auto 0;
+    z-index: 1; /* Ensure content remains on top */
+    overflow: hidden; /* Prevent pseudo-element overflow */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Match the background color */
+    filter: blur(10px); /* Apply the blur */
+    -webkit-filter: blur(10px); /* Compatibility with WebKit browsers */
+    z-index: -1; /* Place it behind the content */
+    pointer-events: none; /* Allow interaction with header content */
 }
 
 header nav{
@@ -989,3 +1007,118 @@ hr{
   border: 2px solid rgb(255, 254, 254);
 }
 
+/* donate */
+.one-time a{
+  background: #066948;
+  color: #ffffff;
+  text-decoration:none;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.monthly a{
+  background: #066948;
+  color: #ffffff;
+  text-decoration:none;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+/* One Time Payment */
+.one-timeP{
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  margin: auto;
+  max-width: 1000px;
+}
+
+@media only screen and (max-width: 768px) {
+  .one-timeP{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 600px;
+  }
+  .onetime-form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 400px;
+  }
+  .onetime-form Form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: auto;
+    max-width: 350px;
+  }
+  .onetime-form p{
+    max-width: 350px;
+    font-size: 0.9rem;
+  }
+  }
+
+.one-time h1, .monthly h1{
+  color: #057d55;
+}
+
+.onetime-banner{
+  flex: 0.5;
+  padding: 0;
+  max-width: 400px;
+}
+
+.banner-image{
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.onetime-form{
+  flex: 1;
+  border: 1px solid #057d55;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.onetime-form Form{
+  min-width: 450px;
+}
+
+.onetime-form h1{
+  color: #057d55;
+}
+
+.onetime-form p{
+  font-size: 0.9rem;
+}
+
+.error{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 1000px;
+}

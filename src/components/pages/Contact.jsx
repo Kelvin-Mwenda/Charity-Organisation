@@ -1,3 +1,4 @@
+//import FooterLayout from '../src/components/layouts/FooterLayout.jsx'
 import { redirect, useActionData } from "react-router-dom"
 import { Form, Button} from 'react-bootstrap';
 import { faMobileAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -50,8 +51,6 @@ export default function Contact() {
                         </div>
 
                         <div className="contact-us-brief">
-                            <div><p></p><p>123 Charity Avenue</p></div>
-                            <div><p></p><p>ELDORET,  KENYA, 30100</p></div>
                             <div>
                                 <p><FontAwesomeIcon icon={faMobileAlt} size="1x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/></p>
                                 <p style={{marginLeft:'-10px'}}>0720803208</p>
@@ -60,6 +59,8 @@ export default function Contact() {
                                 <p><FontAwesomeIcon icon={faEnvelope} size="1x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/></p> 
                                     <p>wasilpaul@yahoo.com </p>
                             </div>
+                            <div><p>123 Charity Avenue</p><p></p></div>
+                            <div className="mb-5"><p>ELDORET,  KENYA, 30100</p><p></p></div>
 
                             {/* Social Media Icons */}
                             <div className="social-media-styles">
