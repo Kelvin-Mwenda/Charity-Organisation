@@ -1,10 +1,14 @@
 import {Image} from 'react-bootstrap';
+import Header from './Header.jsx'
 import FooterLayout from './FooterLayout.jsx'
 
 export default function About(){
 
     return(
         <>
+            {/* HeaderLayout */}
+            <Header/>
+
             <div className="about-us">
                 <div className="intro">
                     <div className="home-intro">
@@ -92,6 +96,8 @@ export default function About(){
                     </p>
                 </div>
             </div>
+
+            {/* <FooterLayout/> */}
             <FooterLayout/>
         </>
     )

@@ -1,5 +1,6 @@
 import {  useLoaderData, useParams } from "react-router-dom"
 import FooterLayout from './FooterLayout.jsx'
+import Header from './Header.jsx'
 
 export default function ProjectsDetails() {
     const project= useLoaderData()
@@ -7,6 +8,9 @@ export default function ProjectsDetails() {
 
     return (
         <>
+            {/* HeaderLayout */}
+            <Header/>
+
             <div className="projects-details">
                 <h2>{project.name}</h2>
                 {/* <img src={`./src/assets/${project.image}`} alt={project.name} className="projects-image" /> */}

@@ -6,6 +6,7 @@
 }
 
 body {
+  padding: 0;
   margin: 0;
   font-family: 'Times New Roman', 'Times Serif';
   background: var(--secondary);
@@ -49,7 +50,7 @@ button {
   top: 0;
   left: 0;
   right: 0;
-  padding: 10px;
+  padding: 8px;
   color: black;
   background: #ffffffe4;
   text-align: center;
@@ -68,8 +69,6 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: #ffffff3b;
-    background-color: #ffffff3b; /* Semi-transparent background */
     padding: 10px; /* Adjust padding as needed */
     margin: auto 0;
     z-index: 1; /* Ensure content remains on top */
@@ -174,22 +173,22 @@ header .profile a.active{
 
 header nav a{
   text-decoration: none;
+  font-style: 2rem;
   padding: 6px;
   border-radius: 4px;
-  color: #06d18d;
+  color: #057d55;
   transition: all 0.3s ease-in-out;
 }
 
 header nav a:hover{
-  background: #06d18d;
+  background: #057d55;
   color: #ffffff;
 }
 
 header nav a.active{
-  color: #06d18d;
-  border: 1px solid #06d18d;
+  color: #057d55;
+  border: 1px solid #057d55;
   border-radius: 4px;
-  background-color: #00000096;
 }
 
 /* page content */
@@ -348,7 +347,7 @@ main{
 
 .strategy h1{
   text-align: center;
-  color: rgb(5, 125, 85);
+  color: #057d55;
 }
 
 @media only screen and (max-width: 768px) {
@@ -366,7 +365,7 @@ main{
 
 .sponsors h1{
   text-align: center;
-  color: rgb(5, 125, 85);
+  color: #057d55;
 }
 
 .marquee-style{
@@ -680,7 +679,7 @@ main{
 }
 
 /* Login */
-.sign-up{
+body .sign-up{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -688,7 +687,7 @@ main{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 20px;
+  padding: 40px;
 }
 
 .sign-up h1{
@@ -736,7 +735,7 @@ main{
   padding: 10px;
   border: none;
   border-radius: 4px;
-  color: rgb(5, 125, 85);
+  color: #057d55;
   transition: all 0.4s ease-in-out;
 }
 

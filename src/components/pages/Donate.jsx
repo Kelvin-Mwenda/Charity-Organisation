@@ -1,6 +1,8 @@
 // import { useState } from "react"
 import { NavLink,Outlet } from 'react-router-dom'
 import FooterLayout from './FooterLayout.jsx'
+import Header from './Header.jsx'
+import Breadcrumbs from './Breadcrumbs'
 
 export default function Donate() {
 
@@ -8,6 +10,10 @@ export default function Donate() {
 
     return(
         <>
+            {/* HeaderLayout */}
+            <Header/>
+            <Breadcrumbs/>
+
             <div className="hero-section" style={{ backgroundImage : 'url(../src/assets/schoolsupplies.jpg)'}}>
                 <div className="home-verse ms-3">
                     <h1 className="mb-5">DONATE</h1>

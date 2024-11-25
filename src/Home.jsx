@@ -2,6 +2,7 @@
 //import FooterLayout from '../src/components/layouts/FooterLayout.jsx'
 import { Image, Button } from 'react-bootstrap';
 import { useTypewriter } from 'react-simple-typewriter'
+import Header from './components/pages/Header'
 import FooterLayout from './components/pages/FooterLayout.jsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -39,6 +40,9 @@ export default function Home () {
 
     return(
         <>
+            {/* HeaderLayout */}
+            <Header/>
+
             <div className="hero-section" style={{backgroundImage : 'url(../src/assets/schoolsupplies.jpg)'}}>
                 <div className="home-verse">
                     <h1 className="mb-2">Empowering Communities with {''} 

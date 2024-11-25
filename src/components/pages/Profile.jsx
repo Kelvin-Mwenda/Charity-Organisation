@@ -2,11 +2,15 @@ import Account from "./Account";
 import Donations from "./Donations";
 import Notifications from "./Notifications";
 import ResetPassword from "./ResetPassword";
+import Header from './Header.jsx'
 
 
 export default function Profile() {
     return (
         <>
+            {/* HeaderLayout */}
+            <Header/>
+            
             <div className="profile">
                 <div className="profile-nav">
                     <nav>

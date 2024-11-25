@@ -1,7 +1,7 @@
 import { createBrowserRouter, createRoutesFromElements, RouterProvider,Route } from 'react-router-dom'
 
 //layouts
-import HeaderLayout from './components/pages/HeaderLayout'
+import Default from './components/pages/Default.jsx'
 
 //pages
 import Home from './Home.jsx'
@@ -27,8 +27,8 @@ export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
 
-      <Route path="/" element={<HeaderLayout/>} errorElement={<ProjectsError/>}>
-        <Route index element={<Home/>}/>
+      <Route path='/' element={<Default/>} errorElement={<ProjectsError/>}>
+        <Route index element={<Home/>}/> 
         <Route path="about" element={<About/>}/>
         <Route path="projects" element={<Projects/>} loader = {projectsLoader} errorElement={<ProjectsError/>}/>
         <Route path="projects/:id" element={<ProjectsDetails/>} loader = {ProjectDetailsLoader} errorElement={<ProjectsError/>}/>
@@ -51,7 +51,6 @@ export default function App() {
   return (
     <>
       <RouterProvider router={router}/>
-      
     </>
   )
 }

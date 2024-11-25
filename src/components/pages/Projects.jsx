@@ -1,5 +1,6 @@
 import { useLoaderData,Link } from "react-router-dom"
 import {Image} from 'react-bootstrap';
+import Header from './Header.jsx'
 import FooterLayout from './FooterLayout.jsx'
 
 export default function Projects() {
@@ -7,6 +8,9 @@ export default function Projects() {
 
     return(
         <>
+            {/* HeaderLayout */}
+            <Header/>
+
             <div className="home-intro">
                 <div className="about-image">
                     <Image xs={4} src="../src/assets/father.jpg" alt="Company Logo" style={{height:'75%'}} className="about-image"/>

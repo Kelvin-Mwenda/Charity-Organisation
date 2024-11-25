@@ -11,6 +11,8 @@ import {
     faFacebook
 } from '@fortawesome/free-brands-svg-icons';
 import FooterLayout from './FooterLayout.jsx'
+import Header from './Header.jsx'
+import Breadcrumbs from './Breadcrumbs'
 
 
 export default function Contact() {
@@ -18,6 +20,10 @@ export default function Contact() {
 
     return(
         <>
+            {/* HeaderLayout */}
+            <Header/>
+            <Breadcrumbs/>
+
             <div className="home-intro">
                 
 

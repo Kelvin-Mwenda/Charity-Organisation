@@ -1,9 +1,13 @@
 
 import { Form, Button} from 'react-bootstrap';
+import Title from './Title'
 
 export default function Signup() {
     return (
         <>
+            {/* HeaderLayout */}
+            <Title/>
+
             <div className="sign-up" style={{backgroundImage:'url(../src/assets/schoolsupplies.jpg)'}}>
                 <h1 className='text-center'>Sign Up</h1>
                 <div className="login-intro">

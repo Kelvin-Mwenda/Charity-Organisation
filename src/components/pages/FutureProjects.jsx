@@ -1,11 +1,17 @@
 import { useLoaderData } from "react-router-dom"
 import FooterLayout from './FooterLayout.jsx'
+import Header from './Header.jsx'
+import Breadcrumbs from './Breadcrumbs'
 
 export default function FutureProjects() {
     const futureProjects = useLoaderData()
 
     return (
         <>
+            {/* HeaderLayout */}
+            <Header/>
+            <Breadcrumbs/>
+
             <h1 className="text-center" style={{color:'#057d55', fontStyle:'bold'}}>Future Projects</h1>
             <div className="projects">
                 {futureProjects.map(project => (

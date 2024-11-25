@@ -1,4 +1,6 @@
 import { useLoaderData } from "react-router-dom"
+import Header from './Header.jsx'
+import Breadcrumbs from './Breadcrumbs'
 import FooterLayout from './FooterLayout.jsx'
 
 export default function News() {
@@ -6,6 +8,10 @@ export default function News() {
     
     return(
         <>
+            {/* HeaderLayout */}
+            <Header/>
+            <Breadcrumbs/>
+
             <h1 className="text-center" style={{color:'#057d55', fontStyle:'bold'}}>News</h1>
             <div className="projects">
                 {news.map(project => (
