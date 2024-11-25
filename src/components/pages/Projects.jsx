@@ -1,5 +1,6 @@
 import { useLoaderData,Link } from "react-router-dom"
 import {Image} from 'react-bootstrap';
+import FooterLayout from './FooterLayout.jsx'
 
 export default function Projects() {
     const projects = useLoaderData()
@@ -43,6 +44,9 @@ export default function Projects() {
                     </Link>
                 ))}
             </div>
+
+            {/* <FooterLayout/> */}
+            <FooterLayout/>
         </>
     )
 }

@@ -1,4 +1,5 @@
 import {  useLoaderData, useParams } from "react-router-dom"
+import FooterLayout from './FooterLayout.jsx'
 
 export default function ProjectsDetails() {
     const project= useLoaderData()
@@ -19,6 +20,9 @@ export default function ProjectsDetails() {
                 <p className="last-child">Volunteers: {project.volunteers}</p>
             </div>
             <p className="details-id">{id}</p>
+
+            {/* <FooterLayout/> */}
+            <FooterLayout/>
         </>
         
     )

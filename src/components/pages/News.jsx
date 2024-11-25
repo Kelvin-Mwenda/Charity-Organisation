@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom"
+import FooterLayout from './FooterLayout.jsx'
 
 export default function News() {
     const news = useLoaderData()
@@ -16,6 +17,9 @@ export default function News() {
                     </li>
                 ))}
             </div>
+
+            {/* <FooterLayout/> */}
+            <FooterLayout/>
         </>
     )
 }

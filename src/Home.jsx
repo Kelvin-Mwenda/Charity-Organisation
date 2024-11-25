@@ -2,6 +2,7 @@
 //import FooterLayout from '../src/components/layouts/FooterLayout.jsx'
 import { Image, Button } from 'react-bootstrap';
 import { useTypewriter } from 'react-simple-typewriter'
+import FooterLayout from './components/pages/FooterLayout.jsx'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faInstagram,
@@ -231,6 +232,7 @@ export default function Home () {
             </div>
 
             {/* <FooterLayout/> */}
+            <FooterLayout/>
         </>
     )
 }

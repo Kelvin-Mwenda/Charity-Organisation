@@ -1,5 +1,6 @@
 // import { useState } from "react"
 import { NavLink,Outlet } from 'react-router-dom'
+import FooterLayout from './FooterLayout.jsx'
 
 export default function Donate() {
 
@@ -32,6 +33,8 @@ export default function Donate() {
                 <Outlet />
             </main>
 
+            {/* <FooterLayout/> */}
+            <FooterLayout/>
         </>
     )
 }

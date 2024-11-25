@@ -1,8 +1,7 @@
 import { createBrowserRouter, createRoutesFromElements, RouterProvider,Route } from 'react-router-dom'
 
 //layouts
-import HeaderLayout from './components/layouts/HeaderLayout'
-//import Actions from './components/layouts/Actions.jsx'
+import HeaderLayout from './components/pages/HeaderLayout'
 
 //pages
 import Home from './Home.jsx'
@@ -16,7 +15,6 @@ import ProjectsDetails, { ProjectDetailsLoader } from './components/pages/Projec
 
 import './index.css'
 import ProjectsError from './components/pages/ProjectsError.jsx'
-import FooterLayout from './components/layouts/FooterLayout.jsx'
 import Donate from './components/pages/Donate.jsx'
 import MonthlyPayment from './components/pages/MonthlyPayment.jsx'
 import OneTime from './components/pages/OneTime.jsx'
@@ -53,7 +51,7 @@ export default function App() {
   return (
     <>
       <RouterProvider router={router}/>
-      <FooterLayout/>
+      
     </>
   )
 }

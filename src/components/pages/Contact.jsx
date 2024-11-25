@@ -10,6 +10,7 @@ import {
     faTwitter,
     faFacebook
 } from '@fortawesome/free-brands-svg-icons';
+import FooterLayout from './FooterLayout.jsx'
 
 
 export default function Contact() {
@@ -85,6 +86,9 @@ export default function Contact() {
                     
                 </div>
             </div>
+
+            {/* <FooterLayout/> */}
+            <FooterLayout/>
         </>
     )
 }

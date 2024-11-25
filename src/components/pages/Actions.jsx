@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom'
+import FooterLayout from './FooterLayout.jsx'
 
 
 export default function Actions() {
@@ -18,6 +19,8 @@ export default function Actions() {
                 <Outlet/>
             </div>
             
+            {/* <FooterLayout/> */}
+            <FooterLayout/>
         </>
     )
 }

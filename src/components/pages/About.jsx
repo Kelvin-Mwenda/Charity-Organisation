@@ -1,4 +1,5 @@
 import {Image} from 'react-bootstrap';
+import FooterLayout from './FooterLayout.jsx'
 
 export default function About(){
 
@@ -91,6 +92,7 @@ export default function About(){
                     </p>
                 </div>
             </div>
+            <FooterLayout/>
         </>
     )
 }

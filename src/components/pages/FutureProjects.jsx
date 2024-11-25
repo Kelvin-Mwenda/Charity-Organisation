@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom"
+import FooterLayout from './FooterLayout.jsx'
 
 export default function FutureProjects() {
     const futureProjects = useLoaderData()
@@ -18,6 +19,9 @@ export default function FutureProjects() {
                     </li>
                 ))}
             </div>
+
+            {/* <FooterLayout/> */}
+            <FooterLayout/>
         </>
         
     )
