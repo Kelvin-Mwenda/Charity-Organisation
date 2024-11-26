@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 :root {
-  --primary: rgb(5, 125, 85);
+  --primary: #057d55;
   --secondary: #ffffff;
 }
 
@@ -68,6 +68,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-top: 1px solid #066948;
     justify-content: center;
     padding: 10px; /* Adjust padding as needed */
     margin: auto 0;
@@ -117,7 +118,7 @@ header .profile{
   width: 45px;
   cursor: pointer;
   padding: 15px;
-  border: 1px solid #06d18d;
+  border: 1px solid #057d55;
   border-radius: 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -137,7 +138,7 @@ header .profile div a:hover{
 }
 
 .profile .my-profile.active{
-  border: 1px solid #06d18d;
+  border: 1px solid #057d55;
   border-radius: 4px;
 }
 
@@ -155,20 +156,20 @@ header .profile a{
   text-decoration: none;
   padding: 6px;
   border-radius: 4px;
-  color: #06d18d;
+  color: #057d55;
   transition: all 0.3s ease-in-out;
 }
 
 header .profile a:hover{
-  background: #06d18d;
+  background: #057d55;
   color: #ffffff;
 }
 
 header .profile a.active{
-  color: #06d18d;
-  border: 1px solid #06d18d;
+  color: #057d55;
+  border: 1px solid #057d55;
   border-radius: 4px;
-  background-color: #00000096;
+  background-color: #ffffff96;
 }
 
 header nav a{
@@ -189,6 +190,7 @@ header nav a.active{
   color: #057d55;
   border: 1px solid #057d55;
   border-radius: 4px;
+  background-color: #ffffff;
 }
 
 /* page content */
