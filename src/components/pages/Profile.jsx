@@ -3,6 +3,7 @@ import Donations from "./Donations";
 import Notifications from "./Notifications";
 import ResetPassword from "./ResetPassword";
 import Header from './Header.jsx'
+import Breadcrumbs from './Breadcrumbs'
 
 
 export default function Profile() {
@@ -10,6 +11,7 @@ export default function Profile() {
         <>
             {/* HeaderLayout */}
             <Header/>
+            <Breadcrumbs/>
             
             <div className="profile">
                 <div className="profile-nav">

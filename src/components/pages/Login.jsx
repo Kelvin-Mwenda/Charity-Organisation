@@ -21,6 +21,7 @@ export default function Login() {
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" placeholder="Enter password" style={{fontStyle: 'oblique', border:'1px solid #057d55', marginBottom:'20px'}}  required/>
                         </Form.Group>
+                        <p style={{textDecoration:'none', color:'#ffffff'}}>Do not have an account? <span><a href="signup" style={{textDecoration:'none', color:'#057d55'}}>Sign Up</a></span></p>
                         <Button variant="success" type="submit">
                             Login
                         </Button>

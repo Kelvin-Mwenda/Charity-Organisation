@@ -1,5 +1,6 @@
 import {Image} from 'react-bootstrap';
 import Header from './Header.jsx'
+import Breadcrumbs from './Breadcrumbs'
 import FooterLayout from './FooterLayout.jsx'
 
 export default function About(){
@@ -8,6 +9,7 @@ export default function About(){
         <>
             {/* HeaderLayout */}
             <Header/>
+            <Breadcrumbs/>
 
             <div className="about-us">
                 <div className="intro">

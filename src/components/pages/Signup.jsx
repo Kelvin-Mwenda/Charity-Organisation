@@ -9,7 +9,7 @@ export default function Signup() {
             <Title/>
 
             <div className="sign-up" style={{backgroundImage:'url(../src/assets/schoolsupplies.jpg)'}}>
-                <h1 className='text-center'>Sign Up</h1>
+                <h1 className='text-center login'>Sign Up</h1>
                 <div className="login-intro">
                     <Form>
                         <Form.Group controlId="formBasicPassword">
@@ -32,6 +32,7 @@ export default function Signup() {
                             <Form.Label>Confirm Password</Form.Label>
                             <Form.Control type="password" placeholder="Confirm password" style={{fontStyle: 'oblique', border:'1px solid #057d55', marginBottom:'20px'}} required/>
                         </Form.Group>
+                        <p style={{textDecoration:'none', color:'#ffffff'}}>Already have an account? <span><a href="Login" style={{textDecoration:'none', color:'#057d55'}}>Login</a></span></p>
                         <Button variant="success" type="submit">
                             Sign Up
                         </Button>

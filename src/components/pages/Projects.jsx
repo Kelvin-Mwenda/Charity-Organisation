@@ -1,6 +1,7 @@
 import { useLoaderData,Link } from "react-router-dom"
 import {Image} from 'react-bootstrap';
 import Header from './Header.jsx'
+import Breadcrumbs from './Breadcrumbs'
 import FooterLayout from './FooterLayout.jsx'
 
 export default function Projects() {
@@ -10,6 +11,7 @@ export default function Projects() {
         <>
             {/* HeaderLayout */}
             <Header/>
+            <Breadcrumbs/>
 
             <div className="home-intro">
                 <div className="about-image">
