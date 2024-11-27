@@ -56,12 +56,12 @@ export default function HeaderNav() {
                     <a
                         href="/signup"
                         className={isActive("/signup") ? "active-link" : ""}
+                        style={{backgroundColor:'darkgreen',color:'white'}}
                     >
                         Sign Up
                     </a>
                     <a
-                        href="/login"
-                        className={isActive("/login") ? "active-link" : ""}
+                        href="/login" style={{backgroundColor:'white',color:'darkgreen',border:'1px solid darkgreen',borderRadius:'4px'}}
                     >
                         Login
                     </a>
@@ -72,7 +72,7 @@ export default function HeaderNav() {
                                 isActive("/profile") ? "active-link" : ""
                             }`}
                             style={{
-                                backgroundImage: 'url(../src/assets/father.jpg)',
+                                backgroundImage: 'url(../src/assets/father.jpg)'
                             }}
                         ></a>
                     </div>

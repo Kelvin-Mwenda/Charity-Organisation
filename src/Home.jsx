@@ -66,14 +66,17 @@ export default function Home () {
                             The <b>Fr. Wasonga Education and Development Fund</b> is a non-governmental organization supporting the educational and development needs of Children with a special focus on girls who have over the years, been exposed to different types of vulnerabilities, and the boy child, whose plight is emerging as a key issue of concern in the modern world.
                         </p>
                     </div>
+
                     <div className="about-image">
                         <Image xs={4} src="../src/assets/youth.jpg" alt="Company Logo" style={{height:'75%'}} className="about-image"/>
                     </div>
                 </div>
+
                 <div className="about-extra text-center p-5">
                     <p>
                         The Wasonga Girls and Boy Education and Development Fund is founded on the Christ&#39;s teaching in.
                     </p>
+                    
                     <p className="home-verse">
                         <b>Mathew 25: 40</b><br/><i>&#x22;…Whatever you did  to  one of least of these brothers and sisters of mine, you did for me.&#x22;</i></p><p>The fund was formally instituted in the year. However, a lot of education support activities had taken place before then, and now the fund boasts of 20 beneficiaries, some of whom have transited to employment while some are still in school.
                     </p>

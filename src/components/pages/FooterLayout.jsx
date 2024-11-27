@@ -22,7 +22,7 @@ export default function FooterLayout (){
                     {/* Left Section */}
                     <div className="left-section">
                         <h3>Contact Us</h3>
-                        <p>FR. WASONGA’S GIRLS AND BOY EDUCATIONAL AND DEVELOPMENT FUND</p>
+                        <p>FR. WASONGA&#39;S GIRLS AND BOY EDUCATIONAL AND DEVELOPMENT FUND</p>
                         <p>123 Charity Avenue</p>
                         <p>ELDORET,  KENYA, 30100</p>
                         <p>Email: wasilpaul@yahoo.com</p>

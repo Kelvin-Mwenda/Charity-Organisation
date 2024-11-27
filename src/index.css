@@ -93,10 +93,10 @@ header nav a:hover{
 }
 
 header nav .active-link{
-  color: #057d55;
-  border: 2px solid #057d55;
+  color: #ffffff;
+  border: none;
   border-radius: 4px;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 header .profile{
@@ -167,7 +167,7 @@ header nav a{
   font-style: 2rem;
   padding: 6px;
   border-radius: 4px;
-  color: #057d55;
+  color: #032c1e;
   transition: all 0.3s ease-in-out;
 }
 
@@ -235,6 +235,7 @@ header nav a{
   max-width: 1000px;
 }
 
+
 .home-extra{
   max-width: 1000px;
 }
@@ -260,6 +261,8 @@ header nav a{
 }
 
 .home-content{
+  align-items: center;
+  margin: 0 auto;
   max-width: 1200px;
 }
 
@@ -929,9 +932,11 @@ body .sign-up{
   color: #ffffff;
   margin: 10px 0 0 0;
 }
+
 hr{
   margin: 10px;
 }
+
 .footer-top{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -942,26 +947,40 @@ hr{
   margin-bottom: 10px;
   font-size: 8px;
 }
+
 .footer-top p{
   font-size: 14px;
 }
+
 .footer-bottom p{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   margin: 0;
   font-size: 0.7rem;
 }
+
 .left-section{
   flex: 1;
   min-Width: 250px;
   margin-right: auto;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  align-items: start;
+  text-align: start;
 }
+
 .left-section a .faIcon {
   color: #f6f6f6; /* Adjust to your desired color */
 }
+
 .left-section a:hover .faIcon {
   color: #00b60f; /* Adjust to your desired color */
 }
+
 .right-section{
   flex: 1;
   min-Width: 300px;
@@ -988,6 +1007,21 @@ hr{
 }
 
 /* donate */
+.one-time, .monthly{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  max-width: 400px;
+  border-top: 6px solid #066948;
+  border-right: 1px solid #066948;
+  border-left: 1px solid #066948;
+  border-radius: 4px;
+  box-shadow: 1px 3px 2px rgba(0,0,0,0.5);
+}
+
 .one-time a{
   background: #066948;
   color: #ffffff;
@@ -1008,6 +1042,7 @@ hr{
 
 /* One Time Payment */
 .one-timeP{
+  display: block;
   border: none;
   display: flex;
   flex-direction: row;
@@ -1028,6 +1063,7 @@ hr{
     margin: 10px auto;
     max-width: 600px;
   }
+
   .onetime-form{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(1fr));
@@ -1037,6 +1073,7 @@ hr{
     padding: 10px;
     margin: 10px auto;
     max-width: 400px;
+    box-shadow: 2px 3px 2px rgba(0,0,0,0.5);
   }
   .onetime-form Form{
     display: flex;
@@ -1107,7 +1144,7 @@ hr{
 .My-Profile{
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 50px;
   padding: 20px;
   margin: 10px auto;
   max-width: 1000px;
@@ -1117,6 +1154,7 @@ hr{
   flex-shrink: 0; /* Prevent shrinking for other divs */
   flex-basis: auto; /* Allow other divs to size based on their content */
 }
+
 
 .My-Profile div:not(:first-child) {
   flex-grow: 1; /* Take up the remaining space */
@@ -1136,6 +1174,7 @@ hr{
   padding: 10px;
   gap: 16px;
   margin: 10px auto;
+  transition: all 0.3s ease-in-out;
 }
 
 .profile-nav nav a:hover{
@@ -1149,4 +1188,108 @@ hr{
   border-radius: 4px;
   color: #ffffff;
   border-radius: 4px;
+}
+
+.all-me{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-details{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: auto;
+  max-width: 1000px;
+}
+
+.my-details .detail P{
+  font-size: 1.1rem;
+  display: inline;
+  text-align: start;
+}
+
+.my-details .detail h1, p{
+  display: inline;
+  margin: 20px auto;
+}
+
+.my-details .detail{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0;
+}
+
+.my-profile{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 5;
+  margin: auto;
+  max-width: 1000px;
+}
+
+.my-profile .notify-title:first-child {
+  flex-shrink: 0; /* Prevent shrinking for other divs */
+  flex-basis: auto; /* Allow other divs to size based on their content */
+}
+
+.my-profile .notify-icon:not(:first-child) {
+  flex-grow: 1; /* Take up the remaining space */
+}
+
+.notify-icon{
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  border: 1px solid #057d55;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.notification{
+  margin: 10px auto;
+  padding: 20px;
+  border-top: 3px solid #066948;
+  border-left: 1px solid #066948;
+  border-radius: 4px;
+}
+
+table {
+    width: 100%; /* Make the table take up the full width */
+    border-collapse: collapse; /* Remove extra spacing between cells */
+    margin: 20px 0; /* Add some spacing above and below the table */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: left; /* Align text to the left */
+    border: none;
+    border-radius: 4px;
+}
+
+th, td {
+    padding: 12px 15px; /* Increase padding in cells */
+    border: 1px solid #ddd; /* Add a light border around cells */
+}
+
+thead th {
+    background-color: #021b12; /* Dark green background */
+    color: #ffffff; /* White text color */
+    text-transform: uppercase; /* Optional: Make header text uppercase */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* White for odd rows */
+}
+
+tbody tr:hover {
+    background-color: #e8f5e9; /* Light green background on hover */
 }

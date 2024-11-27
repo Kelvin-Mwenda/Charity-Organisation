@@ -4,25 +4,57 @@ export default function Account() {
     return (
         <>
             <div className="account">
-                <h1>My Profile</h1>
+                <h1 className="text-center" style={{color:'#057d55', textAlign: 'start'}}>MY PROFILE</h1>
                 <div className="my-details">
-                    <h3>First Name</h3>
-                    <p>John</p>
-                    <h3>Last Name</h3>
-                    <p>Doe</p>
-                    <h3>Email</h3>
-                    <p>john.doe@gmail.com</p>
-                    <h3>Phone Number</h3>
-                    <p>0712345678</p>
-                    <h3>Address</h3>
-                    <p>123 Street, City, Country</p>
-                    <h3>Zip COde</h3>
-                    <p>12345</p>
-                    <h3>City</h3>
-                    <p>Nairobi</p>
-                    <h3>Country</h3>
-                    <p>Kenya</p>
+                    <div className="detail">
+                        <p style={{margin:'10px 1px'}}>First Name </p>
+                        <p style={{color:'#057d55',fontSize:'1rem', textAlign: 'start',margin:'10px 1px'}}>John</p>
+                        <p></p>
+                    </div>
+
+                    <div className="detail">
+                        <p style={{margin:'10px 1px'}}>Last Name</p>
+                        <p style={{color:'#057d55',fontSize:'1rem', textAlign: 'start',margin:'10px 1px'}}>Doe</p>
+                        <p></p>
+                    </div>
+
+                    <div className="detail">
+                        <p style={{margin:'10px 1px'}}>Email </p>
+                        <p style={{color:'#057d55',fontSize:'1rem', textAlign: 'start',margin:'10px 1px'}}>john.doe@gmail.com</p>
+                        <p></p>
+                    </div>
+
+                    <div className="detail">
+                        <p style={{margin:'10px 1px'}}>Phone Number</p>
+                        <p style={{color:'#057d55',fontSize:'1rem', textAlign: 'start',margin:'10px 1px'}}>0712345678</p>
+                        <p></p>
+                    </div>
+
+                    <div className="detail">
+                        <p style={{margin:'10px 1px'}}>Address </p>
+                        <p style={{color:'#057d55',fontSize:'1rem', textAlign: 'start',margin:'10px 1px'}}>123 Street, City, Country</p>
+                        <p></p>
+                    </div>
+
+                    <div className="detail">
+                        <p style={{margin:'10px 1px'}}>Zip Code </p>
+                        <p style={{color:'#057d55',fontSize:'1rem', textAlign: 'start',margin:'10px 1px'}}>12345</p>
+                        <p></p>
+                    </div>
+
+                    <div className="detail">
+                        <p style={{margin:'10px 1px'}}>City </p>
+                        <p style={{color:'#057d55',fontSize:'1rem', textAlign: 'start',margin:'10px 1px'}}>Nairobi</p>
+                        <p></p>
+                    </div>
+
+                    <div className="detail">
+                        <p style={{margin:'10px 1px'}}>Country </p>
+                        <p style={{color:'#057d55',fontSize:'1rem', textAlign: 'start',margin:'10px 1px'}}>Kenya</p>
+                        <p></p>
+                    </div>
                 </div>
+
             </div>
         </>
     )

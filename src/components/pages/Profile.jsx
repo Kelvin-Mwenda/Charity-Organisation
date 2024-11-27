@@ -4,6 +4,7 @@ import Donations from './Donations';
 import Notifications from './Notifications';
 import ResetPassword from './ResetPassword';
 import Header from './Header.jsx'
+import FooterLayout from './FooterLayout.jsx'
 import Breadcrumbs from './Breadcrumbs'
 
 export default function Profile() {
@@ -14,7 +15,7 @@ export default function Profile() {
             <Header/>             
             <Breadcrumbs/>
 
-            <div className="My-Profile">
+            <div className="My-Profile mb-5">
                 <div className="profile-nav">
                     <nav>
                         <ul>
@@ -38,6 +39,9 @@ export default function Profile() {
                     </Routes>
                 </div>
             </div>
+
+            {/* <FooterLayout/> */}
+            <FooterLayout/>
         </>
     );
 }

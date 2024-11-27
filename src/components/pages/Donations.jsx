@@ -3,7 +3,8 @@
 export default function Donations() {
     return (
         <>
-            <h1>My Donations</h1>
+            <h1 style={{color:'#057d55', textAlign: 'start'}} className="text-center">My Donations</h1>
+            
             <table>
                 <thead>
                     <tr>
@@ -26,7 +27,23 @@ export default function Donations() {
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Credit Card</td>
+                        <td>Master Card</td>
+                        <td>$100</td>
+                        <td>2022-02-15</td>
+                        <td>12:30 PM</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>PayPal</td>
+                        <td>$50</td>
+                        <td>2022-01-01</td>
+                        <td>10:00 AM</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Master Card</td>
                         <td>$100</td>
                         <td>2022-02-15</td>
                         <td>12:30 PM</td>
