@@ -21,6 +21,10 @@ import OneTime from './components/pages/OneTime.jsx'
 import Signup from './components/pages/Signup.jsx'
 import Login from './components/pages/Login.jsx'
 import Profile from './components/pages/Profile.jsx'
+import Account from './components/pages/Account';
+import Donations from './components/pages/Donations';
+import Notifications from './components/pages/Notifications';
+import ResetPassword from './components/pages/ResetPassword';
 
 
 export default function App() {
@@ -29,6 +33,7 @@ export default function App() {
 
       <Route path='/' element={<Default/>} errorElement={<ProjectsError/>}>
         <Route index element={<Home/>}/> 
+        <Route path="home" element={<Home/>}/>
         <Route path="about" element={<About/>}/>
         <Route path="projects" element={<Projects/>} loader = {projectsLoader} errorElement={<ProjectsError/>}/>
         <Route path="projects/:id" element={<ProjectsDetails/>} loader = {ProjectDetailsLoader} errorElement={<ProjectsError/>}/>
@@ -41,7 +46,12 @@ export default function App() {
         </Route>
         <Route path="signup" element={<Signup/>}/>
         <Route path="login" element={<Login/>}/>
-        <Route path="profile" element={<Profile/>}/>
+        <Route path="profile" element={<Profile/>}>
+          <Route path="Profile" element={<Account />} />
+          <Route path="notifications" element={<Notifications />} />
+          <Route path="donations" element={<Donations />} />
+          <Route path="reset-password" element={<ResetPassword />} />
+        </Route>
         <Route path="*" element={<NotFound/>}/>
       </Route>
       

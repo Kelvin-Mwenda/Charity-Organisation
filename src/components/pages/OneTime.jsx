@@ -7,13 +7,12 @@ export default function OneTime() {
 
     function contact() {
         setSend(true);
-        if (send === true) {
-            <Navigate to="contact"/>
-        }
     }
 
     return (
         <>
+            {send && <Navigate to="/contact" replace={true} />}
+            
             <div className="one-timeP">
                 <div className="onetime-banner">
                     <div className="banner-image mb-2">
@@ -48,7 +47,7 @@ export default function OneTime() {
                     <p>
                         Please read our privacy policy here.  Your payment details will be processed by Braintree, a PayPal company ( for credit/debit cards ) or PayPal  a record of your donations will be stored by our organisatioin. <br/>
                         <span>Other ways to give : <b><i>SEPA/BACS I Check I Bitcoin</i></b></span><br/>
-                        Problems donating? Visit our FAQ to most common question.  Still having problems? <Button type="submit" onClick={contact} className="ms-0 p-0" style={{textDecoration:'none', color:'#057d55', cursor:'pointer', backgroundColor:'transparent', border:'none'}}>
+                        Problems donating? Visit our FAQ to most common question.  Still having problems? <Button type="button" onClick={contact} className="ms-0 p-0" style={{textDecoration:'none', color:'#057d55', cursor:'pointer', backgroundColor:'transparent', border:'none'}}>
                             send us an email.
                         </Button>
                     </p>

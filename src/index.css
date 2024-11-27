@@ -1102,3 +1102,51 @@ hr{
   margin: 10px auto;
   max-width: 1000px;
 }
+
+/* Profile */
+.My-Profile{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 1000px;
+}
+
+.My-Profile div:first-child {
+  flex-shrink: 0; /* Prevent shrinking for other divs */
+  flex-basis: auto; /* Allow other divs to size based on their content */
+}
+
+.My-Profile div:not(:first-child) {
+  flex-grow: 1; /* Take up the remaining space */
+}
+
+.profile-nav ul{
+  list-style-type: none;
+}
+
+.profile-nav nav a{
+  text-decoration: none;
+  color: #066948;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 16px;
+  margin: 10px auto;
+}
+
+.profile-nav nav a:hover{
+  background: #057d55;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.profile-nav nav a.active{
+  background: #057d55;
+  border-radius: 4px;
+  color: #ffffff;
+  border-radius: 4px;
+}
