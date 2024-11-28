@@ -15,7 +15,7 @@ export default function About(){
                 <div className="intro">
                     <div className="home-intro">
                         <div className="about-image">
-                            <Image xs={4} src="../src/assets/youth.jpg" alt="Company Logo" style={{height:'75%'}} className="about-image"/>
+                            <Image xs={4} src="../src/assets/charity.jpg" alt="Company Logo" style={{height:'75%'}} className="about-image"/>
                         </div>
 
                         <div className="about-text">

@@ -15,7 +15,7 @@ export default function Projects() {
 
             <div className="home-intro">
                 <div className="about-image">
-                    <Image xs={4} src="../src/assets/father.jpg" alt="Company Logo" style={{height:'75%'}} className="about-image"/>
+                    <Image xs={4} src="../src/assets/light.jpg" alt="Company Logo" style={{height:'75%'}} className="about-image"/>
                 </div>
 
                 <div className="about-text">
@@ -35,7 +35,7 @@ export default function Projects() {
                     </div>
 
                     <div className="about-image">
-                        <Image xs={4} src="../src/assets/father.jpg" alt="Company Logo" style={{height:'75%'}} className="about-image"/>
+                        <Image xs={4} src="../src/assets/education.jpg" alt="Company Logo" style={{height:'75%'}} className="about-image"/>
                     </div>
                 </div>
 
