@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import { Form, Button } from 'react-bootstrap';
 
 export default function ResetPassword() {
@@ -19,9 +18,6 @@ export default function ResetPassword() {
                         Reset Password
                     </Button>
                 </Form>
-                <p>
-                    Already have an account? <Link to="/login" style={{textDecoration:'none', color:'#057d55', cursor:'pointer', backgroundColor:'transparent', border:'none'}}>Login</Link>
-                </p>
             </div>
         </>
     )
