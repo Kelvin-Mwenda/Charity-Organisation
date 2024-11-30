@@ -1,4 +1,5 @@
 import {  useLoaderData, useParams } from "react-router-dom"
+//import {Image} from 'react-bootstrap';
 import FooterLayout from './FooterLayout.jsx'
 import Header from './Header.jsx'
 
@@ -11,18 +12,58 @@ export default function ProjectsDetails() {
             {/* HeaderLayout */}
             <Header/>
 
-            <div className="projects-details">
-                <h2>{project.name}</h2>
-                {/* <img src={`./src/assets/${project.image}`} alt={project.name} className="projects-image" /> */}
-                <p className="last-child">Description: {project.description}</p>
-                <p className="last-child">Status: {project.status}</p>
-                <p className="last-child">Location: {project.location}</p>
-                <p className="last-child">Start Date: {project.startDate}</p>
-                <p className="last-child">End Date: {project.endDate}</p>
-                <p className="last-child">Goal Amount: {project.goalAmount}</p>
-                <p className="last-child">Raised Amount: {project.raisedAmount}</p>
-                <p className="last-child">Volunteers: {project.volunteers}</p>
+
+            <div className="account shadow-sm" style={{color:'#057d55', textAlign: 'start'}}>
+                <h2 className="text-center" style={{color:'#057d55', textAlign: 'start'}}>{project.name}</h2>
+
+                <div className="details-intro">
+                    <div className="detail-image" style={{ backgroundImage: `url(../src/assets/${project.image})`}}>
+
+                        {/* <Image src={"../src/assets/" + project.image} alt="Company Logo" className="details-image"/> */}
+                    </div>
+
+                    <div className="my-p-details">
+                        <div className="detail">
+                            <p style={{margin:'10px 1px',color:'black'}}>Description: </p>
+                            <p style={{color:'#057d55',fontSize:'1rem', textAlign: 'start',margin:'10px 1px'}}>{project.description}</p>
+                            <p></p>
+                        </div>
+
+                        <div className="detail">
+                            <p style={{margin:'10px 1px',color:'black'}}>Status: </p>
+                            <p style={{color:'#057d55',fontSize:'1rem', textAlign: 'start',margin:'10px 1px'}}>{project.status}</p>
+                            <p></p>
+                        </div>
+
+                        <div className="detail">
+                            <p style={{margin:'10px 1px',color:'black'}}>Location: </p>
+                            <p style={{color:'#057d55',fontSize:'1rem', textAlign: 'start',margin:'10px 1px'}}>{project.startDate}</p>
+                            <p></p>
+                        </div>
+
+                        <div className="detail">
+                            <p style={{margin:'10px 1px',color:'black'}}>End Date: </p>
+                            <p style={{color:'#057d55',fontSize:'1rem', textAlign: 'start',margin:'10px 1px'}}>{project.endDate}</p>
+                            <p></p>
+                        </div>
+
+                        <div className="detail">
+                            <p style={{margin:'10px 1px',color:'black'}}>Goal Amount: </p>
+                            <p style={{color:'#057d55',fontSize:'1rem', textAlign: 'start',margin:'10px 1px'}}>{project.goalAmount}</p>
+                            <p></p>
+                        </div>
+
+                        <div className="detail">
+                            <p style={{margin:'10px 1px',color:'black'}}>Raised Amount: </p>
+                            <p style={{color:'#057d55',fontSize:'1rem', textAlign: 'start',margin:'10px 1px'}}>{project.volunteers}</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                
             </div>
+
             <p className="details-id">{id}</p>
 
             {/* <FooterLayout/> */}

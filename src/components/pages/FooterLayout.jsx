@@ -58,7 +58,7 @@ export default function FooterLayout (){
                         height="100%"
                         aria-hidden="false"
                         tabIndex="0"
-                        className="maps-styles"
+                        className="map-styles"
                         allowFullScreen
                         loading="lazy"
                         ></iframe>
