@@ -20,6 +20,8 @@ export default function Contact() {
 
     return(
         <>
+            {data && data.error && <p>{data.error}</p>}
+            
             {/* HeaderLayout */}
             <Header/>
             <Breadcrumbs/>
@@ -40,7 +42,6 @@ export default function Contact() {
                                     <Form.Label>Your email</Form.Label>
                                     <Form.Control type="email" name="email" placeholder="Email" style={{fontStyle: 'oblique', border:'1px solid #057d55', marginBottom:'10px'}} required/>
                                 </Form.Group>
-                                {data && data.error && <p>{data.error}</p>}
                                 <Form.Group controlId="formBasicMessage">
                                     <Form.Label>Your Message</Form.Label>
                                     <Form.Control 
@@ -59,7 +60,8 @@ export default function Contact() {
 
                         <div className="contact-us-brief">
                             <div>
-                                <p style={{margin:'10px 1px'}}><FontAwesomeIcon icon={faMobileAlt} size="1x" className="icon-style" style={{color:'rgb(5, 125, 85',minWidth:'30px'}}/></p>
+                                <p style={{margin:'10px 1px',minWidth:'30px'}}><FontAwesomeIcon icon={faMobileAlt} size="1x" className="icon-style" style={{color:'rgb(5, 125, 85'}}/>
+                                </p>
                                 <p style={{margin:'10px 1px'}}>0720803208</p>
                             </div>
                             <div>
