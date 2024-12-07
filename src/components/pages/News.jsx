@@ -17,9 +17,9 @@ export default function News() {
                 {news.map(project => (
                     <li key={project.id} style={{ backgroundImage: `url(../src/assets/${project.image})`}}>
                         <h4>{project.title}</h4>
-                        <p>{project.content}</p>
-                        <p><i style={{color:"white"}}>{project.author}</i></p>
-                        <p><i style={{color:"white"}}>{project.date}</i></p>
+                        <p>{project.content}</p><br/>
+                        <p><i style={{color:"#c2c2c2"}}>{project.author}</i></p><br/>
+                        <p><i style={{color:"#c2c2c2"}}>{project.date}</i></p>
                     </li>
                 ))}
             </div>

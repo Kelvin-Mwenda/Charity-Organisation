@@ -45,7 +45,7 @@ export default function Projects() {
                 {projects.map(project => (
                     <Link key={project.id} to={project.id.toString()} style={{ backgroundImage: `url(../src/assets/${project.image})`}}>
                         <h2>{project.name}</h2>
-                        <p>{project.description}</p>
+                        <p>{project.description}</p><br/>
                         <p className="last-child">Status: {project.status}</p>
                     </Link>
                 ))}

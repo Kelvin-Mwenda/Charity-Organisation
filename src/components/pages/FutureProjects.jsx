@@ -17,11 +17,11 @@ export default function FutureProjects() {
                 {futureProjects.map(project => (
                     <li key={project.id} to={`/futureProjects/${project.id}`} style={{ backgroundImage: `url(../src/assets/${project.image})`}}>
                         <h2>{project.name}</h2>
-                        <p>{project.description}</p>
-                        <p><i style={{color:"white"}}> {project.location}</i></p>
-                        <p><i style={{color:"white"}}> {project.plannedStartDate}</i></p>
-                        <p><i style={{color:"white"}}>Goal Amount: {project.goalAmount}</i></p>
-                        <p><i style={{color:"white"}}>Expected volunteers: {project.expectedVolunteers}</i></p>
+                        <p>{project.description}</p><br/>
+                        <p><i style={{color:"#c2c2c2"}}> {project.location}</i></p><br/>
+                        <p><i style={{color:"#c2c2c2"}}> {project.plannedStartDate}</i></p><br/>
+                        <p><i style={{color:"#c2c2c2"}}>Goal Amount: {project.goalAmount}</i></p><br/>
+                        <p><i style={{color:"#c2c2c2"}}>Expected volunteers: {project.expectedVolunteers}</i></p>
                     </li>
                 ))}
             </div>
