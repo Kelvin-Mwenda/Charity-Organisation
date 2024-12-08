@@ -1,5 +1,3 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');*/
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
@@ -14,6 +12,7 @@ body {
   font-family: 'Poppins', 'sans-serif';
   background: var(--secondary);
 }
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   body p, h1, h2, h3, h4, h5, h6{
@@ -67,29 +66,28 @@ button {
 }
 
 header {
-    position: relative; /* To enable layering with pseudo-elements */
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-top: 1px solid #066948;
-    justify-content: center;
-    padding: 5px; /* Adjust padding as needed */
-    margin: auto 0;
-    z-index: 1; /* Ensure content remains on top */
-    overflow: hidden; /* Prevent pseudo-element overflow */
+  position: relative; /* To enable layering with pseudo-elements */
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1px solid #066948;
+  justify-content: center;
+  padding: 5px; /* Adjust padding as needed */
+  margin: auto 0;
+  z-index: 1; /* Ensure content remains on top */
+  overflow: hidden; /* Prevent pseudo-element overflow */
 }
 
 header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background: url('../src/assets/cool-digi.jpg') center/cover no-repeat; */
-    filter: blur(5px); /* Apply the blur effect */
-    z-index: -1; /* Place it behind the content */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(5px); /* Apply the blur effect */
+  z-index: -1; /* Place it behind the content */
 }
 
 header nav{
@@ -322,6 +320,7 @@ main{
 .mission:hover, .vision:hover, .goal:hover{
   transform: scale(1.05);
 }
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .mission, .vision, .goal{
@@ -420,6 +419,7 @@ main{
   box-shadow: 4px 3px 3px hsl(0, 0%, 0%, 0.3);
   transition: all 0.3s ease-in-out;
 }
+
 .whats-next h2{
   color: rgb(5, 125, 85);
 }
@@ -494,6 +494,7 @@ main{
   height: 100%;
   width: 150px;
 }
+
 .testimonial::after{
   position: absolute;
   content: "";
@@ -503,6 +504,7 @@ main{
   height: 100%;
   width: 150px;
 }
+
 .testimonial-text{
   display: flex;
   flex-direction: column;
@@ -638,17 +640,21 @@ main{
   gap: 20px;
   margin: 50px 0;
 }
+
 .contact h1{
   color: #057d55;
 }
+
 .contact-us-form{
   flex: 1;
   margin-right: auto;
 }
+
 .contact-us-form Form{
   color: #057d55;
   font-size: large;
 }
+
 .contact-us-brief{
   flex: 1;
   display: flex;
@@ -922,6 +928,7 @@ body .sign-up{
 .news h4 {
   text-align: center;
 }
+
 .news {
   display: grid;
   color: rgb(106, 230, 106);
@@ -942,11 +949,13 @@ body .sign-up{
   text-decoration: none;
   box-shadow: 4px 3px 3px hsl(0, 0%, 0%, 0.3);
 }
+
 .news p {
   color: rgb(255, 255, 255);
   margin: 0;
   transition: all ease-in-out 0.2s;
 }
+
 .news .last-child {
   font-size: 0.8em;
   color: #ffffff;
@@ -957,22 +966,25 @@ body .sign-up{
   max-width: 1200px;
   margin: 5px auto;
 }
+
 .breadcrumbs > *{
   display: inline-block;
   margin-right: 10px;
 }
+
 .breadcrumbs .crumb:after {
   content: '>';
   margin-left: 10px;
 }
+
 .breadcrumbs .crumb:last-child:after {
   display: none;
 }
+
 .breadcrumbs .crumb a {
   color: #000000;
   text-decoration: none;
 }
-
 
 /* footer */
 .footer{
@@ -989,6 +1001,7 @@ body .sign-up{
   color: #ffffff;
   margin: 10px 0 0 0;
 }
+
 .footer-main{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

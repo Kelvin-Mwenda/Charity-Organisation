@@ -13,7 +13,7 @@ import Contact, { contactAction } from './components/pages/Contact.jsx'
 import NotFound from './components/pages/NotFound.jsx'
 import ProjectsDetails, { ProjectDetailsLoader } from './components/pages/ProjectsDetails.jsx'
 
-import './index.css'
+import './components/styles/index.css'
 import ProjectsError from './components/pages/ProjectsError.jsx'
 import Donate from './components/pages/Donate.jsx'
 import MonthlyPayment from './components/pages/MonthlyPayment.jsx'

@@ -12,7 +12,7 @@ export default function Default(){
         <>
             <div className="root-layout">
                 <main>
-                    <Outlet />
+                  <Outlet />
                 </main>
             </div>
         </>
